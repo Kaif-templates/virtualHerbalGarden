@@ -6,45 +6,63 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Gardening Tips</title>
+    <script src="hide.js"></script>
 </head>
 <body>
-    <!-- <div class="h-screen grid place-items-center">
-        <h1 class="text-3xl text-green-900 font-bold text-center">This Page is not Ready Yet,we will come soon</h1>
-    </div> -->
-    <!-- <nav class="flex justify-between p-4 shadow">
-        <div class="">
-            <img src="../assets/logo.png" class="h-10 ">
+    <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow ">
+        
+        <div class="text-4xl text-green-800 font-semibold font-mono ">
+           AYUSH Herb
         </div>
-        <div class="flex space-x-6 text-green-900 text-lg ">
-            <div class="hover:underline hover:text-green-500">Home</div>
-            <div class="hover:underline  hover:text-green-500">Login</div>
-            <div class="hover:underline  hover:text-green-500">Health</div>
+    
+        <!-- Desktop Menu -->
+        <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
+
+            <a href="../index.html">
+            <div class="hover:underline hover:text-green-500">Home</div></a>
+
+            <a href="../login/login.html">
+         <div class="hover:underline hover:text-green-500">Login</div></a>
+
+            <div class="hover:underline hover:text-green-500">Health</div>
+            <a href="./community.html">
             <div class="hover:underline hover:text-green-500">Community</div>
-            <a href="dashbord.html">
+            </a>
+            <a href="./dashbord.html">
                 <div class="hover:underline hover:text-green-500">Dashboard</div>
             </a>
         </div>
-        <div class="flex space-x-4 mr-4">
-            <div>
-                <i class="fa-solid fa-magnifying-glass text-lg mr-1.5 text-green-900"></i>
-                <input type="text" placeholder="search for plants..."
-                    class="border  border-green-900 rounded-lg p-2  px-12 focus:border-black bg-green-50">
-            </div>
-            <div
-                class="text-green-900 flex p-2 rounded-lg px-4 border border-green-900 hover:bg-green-900 hover:text-white">
-                <a href="#"><i class="fa-solid fa-filter mr-1.5"></i>Filter</a>
-            </div>
-            <div
-                class="text-green-900 flex rounded-lg px-4 border p-2 border-green-900  hover:bg-green-900 hover:text-white ">
-                <a href="#" class="flex justify-center items-center">
-                    <p class="bg-green-900 text-white rounded-full w-4 h-4 text-center text-xs mr-1.5 ">?</p>Quiz
-                </a>
-            </div>
-
-
+    
+        
+        <div class="md:hidden cursor-pointer" id="menu-btn">
+            <i class="fa-solid fa-bars text-xl"></i>
         </div>
-    </nav> -->
-    <div class="flex bg-green-200 flex-col lg:flex-row lg:m-10 rounded-xl">
+    
+        
+        <div class="hidden lg:flex space-x-3">
+            <i class="fa-solid fa-magnifying-glass my-auto text-lg text-green-800"></i>
+            <input type="text" class="flex-grow p-2 border rounded-xl border-green-300 placeholder:text-gray-400" placeholder="Search for plants...">
+            <button class="px-4 py-2 border border-green-800 text-green-800 rounded-xl bg-green-50 hover:bg-green-800 hover:text-white transition-colors duration-200">
+                <i class="fa-solid fa-question-circle mr-2"></i>Quiz
+            </button>
+        </div>
+    
+        
+        <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div>
+            <a href="../login/login.html">
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
+            </a>
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
+            <a href="./community.html">
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
+            </a>
+            <a href="./dashbord.html">
+                <div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div>
+            </a>
+        </div>
+    </nav>
+    <div class="flex bg-green-200 flex-col lg:flex-row lg:m-10 sm:mt-auto rounded-xl">
         <div class="flex flex-col flex-1 space-y-8 p-5 justify-center">
             <div><h1 class="text-3xl text-green-900 font-bold">Gardening Tips</h1></div>
             <div><p class="text-xl">Master the art of gardening with our essential tips and tricks. From soil preparation to plant care, learn how to make your garden flourish and grow beautiful blooms.</p></div>
@@ -72,10 +90,10 @@
                 <div class="text-gray-800">
                     <p>Water early in the morning or late in the evening to reduce evaporation.</p>
                 </div>
-                <div class="text-xl text-green-900 font-semibold">
+                <div class="text-xl text-green-900 font-semibold cursor-pointer" onclick="toggleDetails(this)">
                     <h1>Show Details</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Avoid watering the leaves to prevent fungal growth and always use deep watering to encourage strong roots.</p>
                 </div>
             </div>
@@ -91,10 +109,10 @@
                 <div class="text-gray-800">
                     <p>Healthy soil is the foundation of a thriving garden.</p>
                 </div>
-                <div class="text-xl text-green-900 font-semibold">
+                <div class="text-xl text-green-900 font-semibold cursor-pointer" onclick="toggleDetails(this)">
                     <h1>Show Details</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Add organic compost to enrich the soil and maintain a balanced pH level. Consider mulching to retain moisture.</p>
                 </div>
             </div>
@@ -107,13 +125,13 @@
                 <div class="text-2xl text-green-900 font-bold">
                     <h1>Fertilizing Frequency</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Fertilize every 4-6 weeks during the growing season to maintain soil health.</p>
                 </div>
-                <div class="text-xl text-green-900 font-semibold">
+                <div class="text-xl text-green-900 font-semibold cursor-pointer" onclick="toggleDetails(this)">
                     <h1>Show Details</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Use a balanced fertilizer or organic alternatives like compost tea. Make sure to follow instructions to avoid over-fertilization.</p>
                 </div>
             </div>
@@ -126,13 +144,13 @@
                 <div class="text-2xl text-green-900 font-bold">
                     <h1>Pest Control</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Protect your plants from pests with natural remedies.</p>
                 </div>
-                <div class="text-xl text-green-900 font-semibold">
+                <div class="text-xl text-green-900 font-semibold cursor-pointer" onclick="toggleDetails(this)">
                     <h1>Show Details</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Use neem oil, garlic spray, or companion planting to deter pests without harming beneficial insects.</p>
                 </div>
             </div>
@@ -148,10 +166,10 @@
                 <div class="text-gray-800">
                     <p>Ensure your plants receive the appropriate amount of sunlight.</p>
                 </div>
-                <div class="text-xl text-green-900 font-semibold">
+                <div class="text-xl text-green-900 font-semibold cursor-pointer" onclick="toggleDetails(this)">
                     <h1>Show Details</h1>
                 </div>
-                <div class="text-gray-800">
+                <div class="text-gray-800 hidden details">
                     <p>Most vegetables need at least 6 hours of direct sunlight per day. Consider growing shade-tolerant plants in low-light areas.</p>
                 </div>
             </div>
