@@ -12,111 +12,105 @@
 </head>
 
 <body>
-    <nav class="flex justify-between p-4 shadow">
-        <div class="">
-            <img src="./assets/logo.png" class="h-10 ">
+    <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
+        
+        <div>
+            <img src="./assets/logo.png" class="h-10">
         </div>
-        <div class="flex space-x-6 text-green-900 text-lg ">
+    
+        <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <div class="hover:underline hover:text-green-500">Home</div>
-            <div class="hover:underline  hover:text-green-500">Login</div>
-            <div class="hover:underline  hover:text-green-500">Health</div>
+            <div class="hover:underline hover:text-green-500">Login</div>
+            <div class="hover:underline hover:text-green-500">Health</div>
             <div class="hover:underline hover:text-green-500">Community</div>
             <a href="./Arun/dashbord.html">
                 <div class="hover:underline hover:text-green-500">Dashboard</div>
             </a>
         </div>
-        <div class="flex space-x-4 mr-4">
-            <div>
-                <i class="fa-solid fa-magnifying-glass text-lg mr-1.5 text-green-900"></i>
-                <input type="text" placeholder="search for plants..."
-                    class="border  border-green-900 rounded-lg p-2  px-12 focus:border-black bg-green-50">
-            </div>
-            <div
-                class="text-green-900 flex p-2 rounded-lg px-4 border border-green-900 hover:bg-green-900 hover:text-white">
-                <a href="#"><i class="fa-solid fa-filter mr-1.5"></i>Filter</a>
-            </div>
-            <div
-                class="text-green-900 flex rounded-lg px-4 border p-2 border-green-900  hover:bg-green-900 hover:text-white ">
-                <a href="#" class="flex justify-center items-center">
-                    <p class="bg-green-900 text-white rounded-full w-4 h-4 text-center text-xs mr-1.5 ">?</p>Quiz
-                </a>
-            </div>
-
-
+    
+        
+        <div class="md:hidden cursor-pointer" id="menu-btn">
+            <i class="fa-solid fa-bars text-xl"></i>
+        </div>
+    
+        
+        <div class="hidden lg:flex space-x-3">
+            <i class="fa-solid fa-magnifying-glass my-auto text-lg text-green-800"></i>
+            <input type="text" class="flex-grow p-2 border rounded-xl border-green-300 placeholder:text-gray-400" placeholder="Search for plants...">
+            <button class="px-4 py-2 border border-green-800 text-green-800 rounded-xl bg-green-50 hover:bg-green-800 hover:text-white transition-colors duration-200">
+                <i class="fa-solid fa-question-circle mr-2"></i>Quiz
+            </button>
+        </div>
+    
+        
+        <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div>
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
+            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
+            <a href="./Arun/dashbord.html">
+                <div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div>
+            </a>
         </div>
     </nav>
     <main>
-
-        <div class="bg-green-50 h-1/3 p-26  flex border-green-800  mx-18 shadow">
-            <div class="w-1/2">
-                <div class="text-5xl font-bold text-green-800">Reconnect with Nature’s Remedies – Your Online Herbal
-                    Guide</div>
-                <div class="mt-10 text-xl font-sans ">Discover the power of nature with our carefully selected
-                    collection of medicinal plants. Tap into the timeless wisdom of AYUSH and experience holistic
-                    well-being the natural way.</div>
-                <div class="mt-12">
-                    <button class="bg-green-800 rounded-lg  py-3 px-12 text-white font-bold">
-                        Get Started
-                    </button>
-                </div>
+        <div class="bg-sec-color m-4 md:m-12 lg:m-16 p-6 md:p-10 lg:p-16 shadow-lg rounded-lg flex flex-col md:flex-row space-y-8 md:space-y-0 md:space-x-8 items-center justify-center">
+            <div class="flex flex-col w-full md:w-6/12 text-center md:text-left">
+                <h1 class="leading-tight mb-6 md:mb-12 text-3xl md:text-5xl text-green-800 font-bold">Step Into Nature's Pharmacy: Your Virtual Herbal Haven</h1>
+                <p class="text-gray-600 text-lg md:text-xl">Explore a world of traditional healing with our curated collection of medicinal plants. Unveil the ancient wisdom of AYUSH and embrace the natural way to well-being.</p>
+                <button class="bg-green-800 text-white px-6 py-2 text-lg rounded-lg mt-8 w-full md:w-48 transition-transform transform hover:scale-105 hover:bg-green-600 hover:shadow-lg hover:text-gray-100 duration-300 ease-in-out">Get Started</button>
             </div>
-            <div class="w-1/2 justify-end flex">
-                <img src="./assets/herbs img.jpg" class="h-96 rounded-4xl">
+            <div class="w-full md:w-4/12 flex justify-center md:mt-16 lg:mt-28">
+                <img src="./assets/herbs img.jpg" alt="Nature" class="h-64 md:h-5/6 rounded-full object-cover lg:mb-10 lg:ml-32">
             </div>
-
         </div>
+    
+        <!-- Plant Listing Section -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-4 sm:mx-8 md:mx-12 lg:mx-16 mt-12 md:mt-16 lg:mt-28 gap-6">
 
-        <!-- plant listing section -->
-        <div class=" grid grid-cols-4 mx-16 mt-28 gap-3.5">
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/aloevera.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/aloevera.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Aloe Vera</p>
                     <p class="text-gray-500">Succulent</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6     "></i>
+                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
 
-
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/ashwagandha.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/ashwagandha.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Ashwagandha</p>
                     <p class="text-gray-500">Shrub</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6     "></i>
+                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/cactus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/cactus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Cactus</p>
+                    <p class="font-bold text-2xl text-gray-700"> Cactus</p>
                     <p class="text-gray-500">Succulent</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6     "></i>
+                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/dandelion2.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/dandelion2.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Dandelion</p>
                     <p class="text-gray-500">Flowering Plant</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6     "></i>
+                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200 ">
-                <img src="./assets/eucalyptus.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/eucalyptus.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Eucalyptus</p>
                     <p class="text-gray-500">Tree</p>
@@ -124,10 +118,9 @@
                 <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
-
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/ginger.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/ginger.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Ginger</p>
                     <p class="text-gray-500">Herb</p>
@@ -136,20 +129,20 @@
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/hibiscus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/hibiscus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Hibiscus</p>
-                    <p class="text-gray-500">Flowering Plant</p>
+                    <p class="text-gray-500">Flowering Plant
+
+                    </p>
                 </div>
                 <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/lavender.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/lavender.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Lavender</p>
                     <p class="text-gray-500">Flowering Plant</p>
@@ -158,9 +151,8 @@
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/neem.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/neem.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Neem</p>
                     <p class="text-gray-500">Tree</p>
@@ -169,9 +161,8 @@
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/rosemary.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/rosemary.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Rosemary</p>
                     <p class="text-gray-500">Herb</p>
@@ -180,9 +171,8 @@
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/sage.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/sage.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Sage</p>
                     <p class="text-gray-500">Herb</p>
@@ -191,134 +181,137 @@
             </div>
 
 
-            <div
-                class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/tulsi.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full  rounded-t-2xl">
+            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/tulsi.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
                 <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Tulsi</p>
+                    <p class="font-bold text-2xl text-gray-700">Tulsi
+                    </p>
                     <p class="text-gray-500">Herb</p>
                 </div>
                 <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
             </div>
+            
+           
+        </div>
+    
+    
 
+       <!-- Variety Section -->
+<div class="text-center mt-16 px-6 md:px-12 lg:px-20">
+    <div class="text-4xl sm:text-5xl font-bold text-green-800">
+        Discover the Power of Natural Healing
+    </div>
+    <div class="mt-4 sm:mt-6 text-lg sm:text-xl opacity-70">
+        Explore a wide variety of time-honored practices designed to promote holistic wellness and rejuvenate
+        your body and mind.
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 mt-8 sm:mt-12">
+        
+        <div class="p-4 sm:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+            <div class="text-4xl sm:text-5xl mb-4 text-center">🌿</div>
+            <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Ayurveda</h3>
+            <p class="text-gray-600 text-sm sm:text-base text-center">
+                Harness the power of ancient Ayurvedic remedies to restore balance and vitality in your life.
+            </p>
+            <p class="text-center font-bold text-green-600 mt-4">Find Your Balance</p>
         </div>
 
-        <!-- Variety Section -->
+        <div class="p-4 sm:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+            <div class="text-4xl sm:text-5xl mb-4 text-center">🧘</div>
+            <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Yoga & Naturopathy</h3>
+            <p class="text-gray-600 text-sm sm:text-base text-center">
+                Embrace the union of body and mind through Yoga and natural therapies for a healthier you.
+            </p>
+            <p class="text-center font-bold text-yellow-600 mt-4">Connect Mind & Body</p>
+        </div>
 
-        <div class="text-center mt-32">
-            <div class="text-5xl font-bold text-green-800">
-                Discover the Power of Natural Healing
+        <div class="p-4 sm:p-6 bg-indigo-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+            <div class="text-4xl sm:text-5xl mb-4 text-center">🌱</div>
+            <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Unani</h3>
+            <p class="text-gray-600 text-sm sm:text-base text-center">
+                Explore the time-tested Unani system that promotes holistic health with natural healing techniques.
+            </p>
+            <p class="text-center font-bold text-indigo-600 mt-4">Holistic Healing</p>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+            <div class="text-4xl sm:text-5xl mb-4 text-center">🌼</div>
+            <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Siddha</h3>
+            <p class="text-gray-600 text-sm sm:text-base text-center">
+                Discover Siddha medicine, a traditional system that emphasizes balance and natural treatments.
+            </p>
+            <p class="text-center font-bold text-red-600 mt-4">Ancient Wisdom, Modern Health</p>
+        </div>
+
+        <div class="p-4 sm:p-6 bg-teal-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+            <div class="text-4xl sm:text-5xl mb-4 text-center">💧</div>
+            <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Homeopathy</h3>
+            <p class="text-gray-600 text-sm sm:text-base text-center">
+                Unlock the gentle power of Homeopathy to address ailments and improve overall well-being.
+            </p>
+            <p class="text-center font-bold text-teal-600 mt-4">Gentle, Effective Care</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Footer Section -->
+<footer class="bg-sec-color text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2 border mt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        
+        <div class="flex justify-center lg:justify-start">
+            <img src="./assets/logo.png" alt="Ayurherb Logo" class="h-20">
+        </div>
+
+        
+        <div class="text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+                <i class="fa-solid fa-location-dot text-green-800 text-2xl mr-4"></i>
+                <p class="text-lg text-green-800">
+                    <span class="block">Lovely Professional University,</span>
+                    Jalandhar, 144411 (Punjab)
+                </p>
             </div>
-            <div class="mt-6 text-xl opacity-70">
-                Explore a wide variety of time-honored practices designed to promote holistic wellness and rejuvenate
-                your body and mind.
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 my-8 h-80 px-12">
-
-
-                <div
-                    class="p-4 sm:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 ">
-                    <div class="text-4xl sm:text-5xl mb-4 text-center">🌿</div>
-                    <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Ayurveda</h3>
-                    <p class="text-gray-600 text-sm sm:text-base text-center mb-4">
-                        Harness the power of ancient Ayurvedic remedies to restore balance and vitality in your life.
-                    </p>
-                    <p class="text-center font-bold text-green-600 mt-4">Find Your Balance</p>
-                </div>
-
-
-                <div
-                    class="p-4 sm:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="text-4xl sm:text-5xl mb-4 text-center">🧘</div>
-                    <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Yoga & Naturopathy</h3>
-                    <p class="text-gray-600 text-sm sm:text-base text-center mb-4">
-                        Embrace the union of body and mind through Yoga and natural therapies for a healthier you.
-                    </p>
-                    <p class="text-center font-bold text-yellow-600 mt-4">Connect Mind & Body</p>
-                </div>
-
-
-                <div
-                    class="p-4 sm:p-6 bg-indigo-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="text-4xl sm:text-5xl mb-4 text-center">🌱</div>
-                    <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Unani</h3>
-                    <p class="text-gray-600 text-sm sm:text-base text-center mb-4">
-                        Explore the time-tested Unani system that promotes holistic health with natural healing
-                        techniques.
-                    </p>
-                    <p class="text-center font-bold text-indigo-600 mt-4">Holistic Healing</p>
-                </div>
-
-
-                <div class="p-4 sm:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="text-4xl sm:text-5xl mb-4 text-center">🌼</div>
-                    <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Siddha</h3>
-                    <p class="text-gray-600 text-sm sm:text-base text-center mb-4">
-                        Discover Siddha medicine, a traditional system that emphasizes balance and natural treatments.
-                    </p>
-                    <p class="text-center font-bold text-red-600 mt-4">Ancient Wisdom, Modern Health</p>
-                </div>
-
-
-                <div class="p-4 sm:p-6 bg-teal-50 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
-                    <div class="text-4xl sm:text-5xl mb-4 text-center">💧</div>
-                    <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Homeopathy</h3>
-                    <p class="text-gray-600 text-sm sm:text-base text-center mb-4">
-                        Unlock the gentle power of Homeopathy to address ailments and improve overall well-being.
-                    </p>
-                    <p class="text-center font-bold text-teal-600 mt-4">Gentle, Effective Care/p>
-                </div>
-
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+                <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
+                <p class="text-lg text-green-800">2784alok@gmail.com</p>
             </div>
         </div>
 
-        <!-- footer section -->
-
-        <footer class="bg-sec-color text-main-color py-12 px-4 md:px-10 shadow-xl border-t-2 border">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="mb-8 md:mb-0 md:w-1/3 flex justify-center md:justify-start">
-                    <img src="./assets/logo.png" alt="Ayurher logo" class=" h-20">
-                </div>
-                <div class="md:w-1/3 text-center md:text-left ">
-                    <div class="flex items-center justify-center md:justify-start mb-4">
-                        <i class="fa-solid fa-location-dot text-green-800 text-2xl mr-4"></i>
-                        <p class="text-lg"><span class="block">Lovely Professional University,</span>Jalandhar, 144411
-                            (Punjab)</p>
-                    </div>
-                    <div class="flex items-center justify-center md:justify-start mb-4"><i
-                            class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                        <p class="text-lg">2784alok@gmail.com</p>
-                    </div>
-
-                </div>
-
-
-                <div class="md:w-1/4 text-center md:text-left">
-                    <span class="text-xl font-bold">Technology Stack Used:</span>
-                    <div class="flex justify-center md:justify-start mt-6 space-x-4"><a
-                            href="https://www.linkedin.com/in/alok-kumar-481045238/" target="_blank"
-                            rel="noopener noreferrer" class="text-3xl hover:text-sub-color"><i
-                                class="fab fa-react text-4xl text-blue-500"></i></a><a
-                            href="https://www.linkedin.com/in/alok-kumar-481045238/" target="_blank"
-                            rel="noopener noreferrer" class="text-3xl hover:text-sub-color"><i
-                                class="fab fa-node-js text-4xl text-green-500"></i></a><a
-                            href="https://www.linkedin.com/in/alok-kumar-481045238/" target="_blank"
-                            rel="noopener noreferrer" class="text-3xl hover:text-sub-color"><i
-                                class="fas fa-database text-4xl text-yellow-500"></i></a><a
-                            href="https://www.linkedin.com/in/alok-kumar-481045238/" target="_blank"
-                            rel="noopener noreferrer" class="text-3xl hover:text-sub-color"><i
-                                class="fas fa-vr-cardboard text-4xl text-purple-500"></i></a><a
-                            href="https://www.linkedin.com/in/alok-kumar-481045238/" target="_blank"
-                            rel="noopener noreferrer" class="text-3xl hover:text-sub-color"><i
-                                class="fab fa-css3-alt text-4xl text-blue-600"></i></a></div>
-
-                </div>
+        
+        <div class="text-center lg:text-left">
+            <span class="text-xl font-bold text-green-800">Technology Stack Used:</span>
+            <div class="flex justify-center lg:justify-start mt-6 space-x-4">
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fab fa-node-js text-4xl text-green-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fas fa-database text-4xl text-yellow-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fas fa-vr-cardboard text-4xl text-purple-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fa-brands fa-php text-4xl text-blue-500"></i>
+                </a>
             </div>
-            <h3 class="text-center mt-16 pb-0 text-lm font-medium border-t-2 border-gray-300 pt-4">© Copyright 2024
-                AyurHerb - All Rights Reserved. Designed and Developed by Alok,Arun,Kaif & Gaurav</h3>
-        </footer>
+        </div>
+
+    </div>
+
+    
+    <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium">
+        © Copyright 2024 AyurHerb - All Rights Reserved. Designed and Developed by Alok, Arun, Kaif & Gaurav
+    </h3>
+</footer>
+
     </main>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
