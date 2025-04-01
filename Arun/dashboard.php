@@ -9,6 +9,15 @@
     <script src="../script.js"></script>
 </head>
 <body>
+    <?php
+    session_start(); // Start the session
+    // Check if user is logged in
+    if (!isset($_SESSION['user_email'])) {
+        header("Location: ../login/login.php"); // Redirect to login if not authenticated
+        exit();
+    }
+    $user_email = $_SESSION['user_email']; // Get the user's email from session
+    ?>
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
@@ -96,7 +105,7 @@
                 <div><h2>Community Fourm</h2></div>
             </div></a>
         </div>
-        <a href="#">
+        <a href="../login/logout.php">
             <div class="flex justify-center mt-auto">
                     <button class="bg-red-400 hover:bg-red-500 py-2 px-20 rounded-md font-semibold">Logout</button>
             </div>
@@ -105,7 +114,7 @@
     <!-- main cintent -->
     <div class="bg-green-50 flex-1 mx-auto p-7 w-full md:pl-71 ">
         <div class=" text-3xl">
-            <h1 class="text-green-900 font-bold">Welcome Back, Email</h1>
+            <h1 class="text-green-900 font-bold">Welcome Back, <?php echo htmlspecialchars($user_email); ?></h1>
         </div>
         <div class="grid grid-rows lg:grid-cols-4 gap-5 mt-10">
             <a href="bookmark.html">
