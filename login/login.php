@@ -10,11 +10,8 @@
     <title>Login - AYUSH Herb</title>
 </head>
 <body class="font-sans">
-    <!-- Navigation Bar -->
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
-        <div class="text-4xl text-green-800 font-semibold font-mono">
-            AyushHerb
-        </div>
+        <div class="text-4xl text-green-800 font-semibold font-mono">AyushHerb</div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
@@ -41,34 +38,62 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
     <main class="flex justify-center bg-green-50 min-h-screen">
         <div class="bg-white rounded w-full max-w-sm mt-40 text-center p-8 shadow">
             <div class="text-2xl font-bold text-green-600 pt-6">Login</div>
 
             <?php
-            session_start(); // Start the session
+session_start();
 
-            // Hardcoded credentials for testing
-            $valid_email = "user@example.com";
-            $valid_password = "password123";
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $email = $_POST['email'];
-                $password = $_POST['password'];
+    $conn = new mysqli("localhost", "root", "", "ayush_herb");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-                // Authentication check
-                if ($email === $valid_email && $password === $valid_password) {
-                    $_SESSION['user_email'] = $email; // Store email in session
-                    header("Location: ../Arun/dashboard.php"); // Redirect to dashboard
-                    exit();
-                } else {
-                    echo '<p class="text-red-500 mt-4">Invalid email or password!</p>';
-                }
-            }
-            ?>
+    // Check admins table first
+    $stmt = $conn->prepare("SELECT password FROM admins WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($hashed_password);
+    $stmt->fetch();
 
-            <!-- Login Form -->
+    if ($hashed_password && password_verify($password, $hashed_password)) {
+        $_SESSION['user_email'] = $email;
+        $_SESSION['is_admin'] = true; // Flag for admin
+        header("Location: ../Arun/admin1.php");
+        $stmt->close();
+        $conn->close();
+        exit();
+    }
+    $stmt->close();
+
+    // Check users table if not admin
+    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $email);
+    $stmt->execute();
+    $stmt->bind_result($hashed_password);
+    $stmt->fetch();
+
+    if ($hashed_password && password_verify($password, $hashed_password)) {
+        $_SESSION['user_email'] = $email;
+        $_SESSION['is_admin'] = false; // Flag for regular user
+        header("Location: ../Arun/dashboard.php");
+        $stmt->close();
+        $conn->close();
+        exit();
+    } else {
+        echo '<p class="text-red-500 mt-4">Invalid email or password!</p>';
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
             <form class="mt-4" method="POST" action="">
                 <input type="email" name="email" placeholder="Email" required class="p-2 border w-full rounded mb-4">
                 <div class="relative">
@@ -84,10 +109,8 @@
         </div>
     </main>
 
-    <!-- Scripts -->
     <script src="../script.js"></script>
     <script>
-        // Password visibility toggle
         document.getElementById('toggle-password').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             if (passwordInput.type === 'password') {

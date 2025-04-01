@@ -10,7 +10,7 @@
     <title>Register - AYUSH Herb</title>
 </head>
 <body class="font-sans">
-    <!-- Navigation Bar (Copied from login.php) -->
+    <!-- Navigation Bar -->
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
         <div class="text-4xl text-green-800 font-semibold font-mono">
             AyushHerb
@@ -47,14 +47,12 @@
             <div class="text-2xl font-bold text-green-600 pt-6">Register</div>
 
             <?php
-            session_start(); // Start session
-
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $email = $_POST['email'];
                 $password = $_POST['password'];
                 $confirm_password = $_POST['confirm_password'];
 
-                // Basic validation
+                // Validation
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     echo '<p class="text-red-500 mt-4">Invalid email format!</p>';
                 } elseif ($password !== $confirm_password) {
@@ -62,11 +60,38 @@
                 } elseif (strlen($password) < 6) {
                     echo '<p class="text-red-500 mt-4">Password must be at least 6 characters!</p>';
                 } else {
-                    // Simulate successful registration (replace with database logic later)
-                    $_SESSION['user_email'] = $email;
-                    echo '<p class="text-green-500 mt-4">Registration successful! Redirecting to login...</p>';
-                    header("Refresh: 2; url=./login.php"); // Redirect after 2 seconds
-                    exit();
+                    // Database connection
+                    $conn = new mysqli("localhost", "root", "", "ayush_herb");
+
+                    if ($conn->connect_error) {
+                        die("Connection failed: " . $conn->connect_error);
+                    }
+
+                    // Check if email already exists
+                    $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $stmt->store_result();
+
+                    if ($stmt->num_rows > 0) {
+                        echo '<p class="text-red-500 mt-4">Email already registered!</p>';
+                    } else {
+                        // Hash the password and insert user
+                        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+                        $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
+                        $stmt->bind_param("ss", $email, $hashed_password);
+
+                        if ($stmt->execute()) {
+                            echo '<p class="text-green-500 mt-4">Registration successful! Redirecting to login...</p>';
+                            header("Refresh: 2; url=./login.php"); // Redirect after 2 seconds
+                            exit();
+                        } else {
+                            echo '<p class="text-red-500 mt-4">Registration failed! Please try again.</p>';
+                        }
+                    }
+
+                    $stmt->close();
+                    $conn->close();
                 }
             }
             ?>
