@@ -1,3 +1,18 @@
+<?php
+ob_start(); // Start output buffering to prevent header issues
+session_start();
+
+// Redirect if already logged in
+if (isset($_SESSION['user_email'])) {
+    if ($_SESSION['is_admin']) {
+        header("Location: ../Arun/admin1.php");
+    } else {
+        header("Location: ../Arun/dashboard.php");
+    }
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +31,7 @@
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <div class="hover:underline hover:text-green-500">Health</div>
-            <a href="../Arun/community.html"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="../Arun/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="../Arun/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
@@ -33,7 +48,7 @@
             <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
-            <a href="../Arun/community.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
+            <a href="../Arun/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
             <a href="../Arun/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
         </div>
     </nav>
@@ -43,56 +58,59 @@
             <div class="text-2xl font-bold text-green-600 pt-6">Login</div>
 
             <?php
-session_start();
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $email = trim($_POST['email']);
+                $password = trim($_POST['password']);
+                $is_admin_login = isset($_POST['admin_login']); // Check if "Login as Admin" button was clicked
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+                $conn = new mysqli("localhost", "root", "", "ayush_herb");
+                if ($conn->connect_error) {
+                    die("Connection failed: " . $conn->connect_error);
+                }
 
-    $conn = new mysqli("localhost", "root", "", "ayush_herb");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+                if ($is_admin_login) {
+                    // Check admins table only
+                    $stmt = $conn->prepare("SELECT password FROM admins WHERE email = ?");
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $stmt->bind_result($hashed_password);
+                    $stmt->fetch();
 
-    // Check admins table first
-    $stmt = $conn->prepare("SELECT password FROM admins WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->bind_result($hashed_password);
-    $stmt->fetch();
+                    if ($hashed_password && password_verify($password, $hashed_password)) {
+                        $_SESSION['user_email'] = $email;
+                        $_SESSION['is_admin'] = true;
+                        $stmt->close();
+                        $conn->close();
+                        header("Location: ../Arun/admin1.php");
+                        exit();
+                    } else {
+                        echo '<p class="text-red-500 mt-4">Invalid admin email or password!</p>';
+                    }
+                    $stmt->close();
+                } else {
+                    // Check users table only
+                    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
+                    $stmt->bind_param("s", $email);
+                    $stmt->execute();
+                    $stmt->bind_result($hashed_password);
+                    $stmt->fetch();
 
-    if ($hashed_password && password_verify($password, $hashed_password)) {
-        $_SESSION['user_email'] = $email;
-        $_SESSION['is_admin'] = true; // Flag for admin
-        header("Location: ../Arun/admin1.php");
-        $stmt->close();
-        $conn->close();
-        exit();
-    }
-    $stmt->close();
+                    if ($hashed_password && password_verify($password, $hashed_password)) {
+                        $_SESSION['user_email'] = $email;
+                        $_SESSION['is_admin'] = false;
+                        $stmt->close();
+                        $conn->close();
+                        header("Location: ../Arun/dashboard.php");
+                        exit();
+                    } else {
+                        echo '<p class="text-red-500 mt-4">Invalid user email or password!</p>';
+                    }
+                    $stmt->close();
+                }
 
-    // Check users table if not admin
-    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->bind_result($hashed_password);
-    $stmt->fetch();
-
-    if ($hashed_password && password_verify($password, $hashed_password)) {
-        $_SESSION['user_email'] = $email;
-        $_SESSION['is_admin'] = false; // Flag for regular user
-        header("Location: ../Arun/dashboard.php");
-        $stmt->close();
-        $conn->close();
-        exit();
-    } else {
-        echo '<p class="text-red-500 mt-4">Invalid email or password!</p>';
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-?>
+                $conn->close();
+            }
+            ?>
 
             <form class="mt-4" method="POST" action="">
                 <input type="email" name="email" placeholder="Email" required class="p-2 border w-full rounded mb-4">
@@ -101,7 +119,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <i class="fa-solid fa-eye absolute right-[5%] top-[25%] text-xs cursor-pointer" id="toggle-password"></i>
                 </div>
                 <button type="submit" class="w-full p-2 bg-green-600 rounded text-white mb-4">Login</button>
-                <button type="button" class="w-full p-2 bg-blue-600 rounded text-white mb-4">Login as Admin</button>
+                <button type="submit" name="admin_login" value="1" class="w-full p-2 bg-blue-600 rounded text-white mb-4">Login as Admin</button>
                 <div class="hover:underline text-blue-500 font-semibold">
                     <a href="./register.php">Don't have an account? Register</a>
                 </div>
@@ -126,3 +144,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </script>
 </body>
 </html>
+
+<?php
+ob_end_flush(); // Flush output buffer
+?>
