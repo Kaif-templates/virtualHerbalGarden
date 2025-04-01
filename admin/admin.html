@@ -9,15 +9,40 @@
 <body>
     <h1>Welcome to Admin page</h1>
     <h2>Insert data into database</h2>
-    <form id="admin" action="admin.php" method="post">
-        <input type="text" name="name" placeholder="Herb Name">
-        <input type="text"name="region" placeholder="Region">
-        <input type="text" name="commonName" placeholder="Common Name">
-        <input type="text" name="type" placeholder="Type">
-        <input type="text" name="botanicalName" placeholder="Botanical Name">
-        <input type="text" name="medicinalUse" placeholder="Medicinal Use">
-        <input type="text" name="cultivation" placeholder="Method of Cultivation">
-        
-    </form>
+    <div id="insertData">
+        <form id="admin" action="admin.php" method="post">
+            <div class="data">
+            
+                Name :
+                <input type="text" name="name" placeholder="Herb Name">
+            </div>
+            <div class="data">
+            
+                Region : 
+                <input type="text"name="region" placeholder="Region">
+            </div>
+            <div class="data">
+            
+                Common Name : 
+                <input type="text" name="commonName" placeholder="Common Name">
+            </div>
+            <div class="data">
+                Type : 
+                <input type="text" name="type" placeholder="Type">
+            </div>
+            <div class="data">
+                Botanical Name : 
+                <input type="text" name="botanicalName" placeholder="Botanical Name">
+            </div>
+            <div class="data">
+                Medicinal Use : 
+                <input type="text" name="medicinalUse" placeholder="Medicinal Use">
+            </div>
+            <div class="data">
+                Cultivation : 
+                <input type="text" name="cultivation" placeholder="Method of Cultivation">
+            </div>
+        </form>
+    </div>
 </body>
 </html>
