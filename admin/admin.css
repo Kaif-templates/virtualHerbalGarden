@@ -25,9 +25,9 @@ h2{
     align-items: center;
     height: 80vh;
     width: 40vw;
-    
+    box-shadow: black;
     border-radius: 8px;
-    
+    border: 2px solid black;
 }
 #admin{
     display: flex;
@@ -39,9 +39,11 @@ h2{
 input{
     border: 2px;
     height: 5vh;
-    width: 20vw;   
+    width: 20vw;  
+    
 }
 
 .data{
     margin: 10px;
+    align-items: right;
 }
