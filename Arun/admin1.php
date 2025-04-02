@@ -85,13 +85,13 @@
                         <div><h2>Manage Users</h2></div>
                     </div>
                 </a>
-                <a href="./admin_herbs.php">
+                <a href="/ca/admin/admin.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-leaf"></i></div>
                         <div><h2>Manage Herbs</h2></div>
                     </div>
                 </a>
-                <a href="./community.php">
+                <a href="../Arun/community.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
                         <div><i class="fa-solid fa-comments"></i></div>
                         <div><h2>Community Forum</h2></div>
@@ -114,6 +114,7 @@
             <!-- Admin Cards -->
             <div class="grid grid-rows lg:grid-cols-4 gap-5 mt-10">
                 <!-- Manage Herbs Card (Insert Herb Data) -->
+                <a href="../admin/admin.php">
                 <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
                     <div class="text-green-900 text-4xl"><i class="fa-solid fa-leaf"></i></div>
                     <div class="text-green-900 text-xl font-bold"><h1>Manage Herbs</h1></div>
@@ -149,6 +150,7 @@
                         <button type="submit" name="herb_submit" class="w-full p-2 bg-green-600 text-white rounded hover:bg-green-700">Add Herb</button>
                     </form>
                 </div>
+                </a>
 
                 <!-- Manage Users Card (Display and Delete Users) -->
                 <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
@@ -233,6 +235,7 @@
                     ?>
                 </div>
             </div>
+            
 
             <!-- Admin Forum Moderation Section (Dynamic) -->
             <div class="bg-green-200 p-8 rounded-xl space-y-4 shadow-xl relative mt-10">
