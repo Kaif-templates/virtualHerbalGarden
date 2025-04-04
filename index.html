@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
+    <nav id="navbar" class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
            AYUSH Herb
@@ -82,7 +82,8 @@
 
 
             <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/aloevera.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
+                <img src="./assets/aloevera.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover " alt="Aloe Vera" onclick="openModal()">
+
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Aloe Vera</p>
                     <p class="text-gray-500">Succulent</p>
@@ -322,6 +323,105 @@
 </footer>
 
     </main>
+
+
+
+
+
+
+    <!-- popup images codes -->
+
+
+    <!-- Modal (Hidden by Default) -->
+    <div id="plantModal1"
+        class="fixed top-0 left-0 w-full h-full bg-black bg-transparent flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg w-3/4 h-screen p-4 relative overflow-hidden">
+            <!-- Close Button -->
+            <button onclick="closeModal()"
+                class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
+
+            <div class="flex flex-col md:flex-row gap-4 h-full">
+
+                <!-- Left Section (3D Model + Image Scroll) -->
+                <div class="w-full md:w-1/2 flex flex-col overflow-y-auto pr-2 ">
+                    <!-- 3D Model (Half Height) -->
+                    <iframe title="Aloe vera plant" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="w-full" height="50%" src="https://sketchfab.com/models/66c6699e50ab4863989777f920a981dd/embed?dnt=1"> </iframe> 
+
+                    <!-- Scrollable Image & Video Gallery -->
+                    <div class="overflow-x-auto flex gap-3 pb-2 ">
+                        <img src="../assets/aloevera2.jpg" class="w-full h-60 rounded-lg object-cover">
+                        
+                        <img src="../assets/aloevera3.jpg" class=" h-60 rounded-lg object-cover">
+                        <img src="../assets/aloevera4.jpg" class=" h-60 rounded-lg object-cover">
+                    </div>
+                </div>
+
+                <!-- Right Section (Scrollable Text) -->
+                <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
+
+                    <h2 class="text-2xl font-bold">Aloe Vera</h2>
+
+                    <div class=" flex flex-col gap-3 overflow-y-auto pr-2 h-2/4 w-full text-xl">
+                        <p class="text-gray-700">Aloe vera is a succulent plant valued for its medicinal properties,
+                            especially for skin care, wound healing, and digestion. It has been used in Ayurveda and
+                            traditional medicine systems for centuries.</p>
+                        <p class="text-gray-700"><strong>Region:</strong> Tropical</p>
+                        <p class="text-gray-700"><strong>Common Names:</strong> English: Aloe Vera, Hindi: Ghritkumari, Tamil: Sotru Katralai,
+                            Telugu: Kalabanda, Sanskrit: Kumari</p>
+                        <p class="text-gray-700"><strong>Type:</strong>Succulent</p>
+
+                        <p class="text-gray-700"><strong> Habitat:</strong> Found in hot, arid climates and well-drained soils. Thrives in dry regions with minimal water. It can grow both outdoors and indoors, making it popular as a houseplant.</p>
+                        <p class="text-gray-700"><strong> Botanical Name:</strong> Aloe barbadensis miller</p>
+                        <p class="text-gray-700"><strong> Medicinal Uses:</strong> Aloe vera is renowned for its wide range of health benefits: Skin Care: Helps soothe burns, wounds, and sunburns. Anti-inflammatory: Reduces inflammation in the skin and joints. Digestive Aid: Aloe juice helps relieve constipation and promotes digestion. Immune System: Contains antioxidants that boost immunity. Wound Healing: Accelerates the healing of cuts and abrasions. Anti-aging: Used in cosmetics for moisturizing and reducing wrinkles. Hair Care: Promotes hair growth and treats scalp conditions.</p>
+
+                        <p class="text-gray-700"><strong>Methods of Cultivation:</strong>Climate Requirements: Requires a warm climate with temperatures between 25°C to 40°C. Does not tolerate frost or extreme cold. Can grow indoors or outdoors in sunny or partially shaded areas. Soil Requirements: Prefers well-drained sandy or loamy soil with good aeration. Optimal pH: 6.0–7.5 (slightly acidic to neutral). It thrives even in poor soils, provided they do not retain excess water. Propagation: Grown from offshoots (pups): Small plants that grow at the base of the parent plant. These pups are removed and replanted in new locations. Irrigation: Requires minimal water. Water only when the soil is completely dry. Overwatering should be avoided as it can cause root rot. Watering once every 3-4 weeks is sufficient in dry conditions. Planting Season: Best time to plant is spring or early summer for optimal growth. Can also be planted in monsoon regions, provided the soil is well-drained. Pest and Disease Control: Aloe vera is relatively resistant to pests. However, it can occasionally be affected by mealybugs, aphids, or fungal infections. Use organic insecticides or neem oil if needed. Harvesting: Ready for harvest after 6-8 months of planting. Outer leaves are removed carefully without damaging the inner core. Fresh leaves are cut and processed to extract the gel, which can be used immediately or stored.
+
+                        </p>
+
+                        <p class="text-gray-700"> <strong> ExtractionProcess: </strong>Leaf Harvesting: Fully matured leaves (outermost) are selected. Washing and Cleaning: The leaves are cleaned to remove any dirt or bacteria. Filleting: The thick outer layer of the leaf is removed, leaving the inner gel. Stabilization: The gel is stabilized through cold processing to maintain its bioactive components. Filtration: The gel is filtered to remove any unwanted particles or fibers. Packaging: Finally, the pure Aloe Vera gel is packaged for use in various industries.
+
+                        </p>
+
+                        <p class="text-gray-700"> <strong> Environmental Impact: </strong>Water Conservation: Aloe Vera requires minimal water and can thrive in arid, drought-prone regions. Soil Conservation: Aloe Vera cultivation helps prevent soil erosion due to its strong root system. Sustainable Crop: As it grows in poor soils and needs low maintenance, it’s considered an eco-friendly crop.
+                        </p>
+                        
+                        <p class="text-gray-700"><strong> Reasons To Grow Outdoors: </strong>Natural Habitat: Aloe Vera is a desert plant, so it naturally thrives in hot, arid environments with plenty of sunlight. Larger Growth: Outdoor Aloe Vera plants can grow larger and produce more "pups" (offshoots) that can be replanted. Direct Sunlight: Outdoors, Aloe Vera can enjoy full sunlight (6-8 hours) and will grow more vigorously. Minimal Watering: Outdoor Aloe Vera requires little water and is drought-tolerant, making it easy to care for in dry climates. Where to Place Aloe Vera Outdoors: Sunlight: Place it in an area where it receives full sun but ensure it's protected from intense afternoon heat in extremely hot climates. Soil: Plant it in well-drained, sandy, or loamy soil. Raised beds or pots with good drainage are ideal. Temperature: It should be placed in a spot where the temperature stays between 25°C to 40°C (77°F to 104°F). Aloe Vera cannot tolerate frost or freezing temperatures, so if you live in a cooler climate, bring the plant indoors during winter or cover it. Why Aloe Vera Helps in Both Settings: Indoors: Aloe Vera improves air quality and offers easy access to its gel for skincare or minor burns, cuts, and insect bites. Outdoors: Aloe Vera benefits from the natural sun, thriving in warm climates and contributing to outdoor garden aesthetics. It's drought-tolerant and helps in soil conservation due to its root system.
+                        </p>
+
+
+                        <p class="text-gray-700"><strong> Nutritional Benefits:</strong> Minerals: Contains calcium, magnesium, zinc, chromium, sodium, iron, potassium, and manganese. Amino Acids: Out of the 22 essential amino acids required by humans, Aloe Vera provides 18. Fatty Acids: Includes both cholesterol-lowering and anti-inflammatory fatty acids. Enzymes: The gel contains various enzymes like lipase and amylase that assist in the breakdown of sugars and fats.
+                        </p>
+
+
+                        <p class="text-gray-700"><strong> Products: </strong>Aloe Vera is used in a variety of forms in the market: Aloe Vera Gel: Used in skincare and for direct application to burns, cuts, and other skin conditions. Aloe Vera Juice: Consumed for digestive benefits and detoxification. Aloe Vera Powder: Used in making capsules, supplements, and cosmetics. Aloe Vera Creams and Lotions: Used in beauty products to hydrate, soothe, and rejuvenate the skin. Aloe Vera Capsules/Tablets: Available as dietary supplements for general health and wellness. Future Trends in Aloe Vera Research: Nanotechnology: Research is exploring the use of Aloe Vera in nanoparticle production for drug delivery systems. Bioplastics: The gel and fibers of Aloe Vera are being studied for their potential use in creating biodegradable plastics. Agricultural Applications: Aloe Vera extracts are being explored as natural pesticides and fertilizers due to their antimicrobial properties.Indoor Plant: Aloe Vera is an excellent indoor plant, especially for homes or offices where you want to enjoy its air-purifying qualities and easy care.
+                        </p>
+                        
+                       
+                        
+                    </div>
+
+
+                    <!-- Audio -->
+                    <audio controls class="w-full">
+                        <source src="../audio/aloe vera.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <!-- Notes -->
+                    <label for="notes" class="text-gray-700 font-bold">Notes:</label>
+                    <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-56"
+                        placeholder="Write your notes here..."></textarea>
+
+                    <!-- Buttons -->
+                    <div class="flex gap-3 mt-2">
+                       <a href="../3d models/Ahwagandha.glb" ><button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button></a>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
+                        <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
