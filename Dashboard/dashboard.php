@@ -31,7 +31,7 @@
            AYUSH Herb
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <div class="hover:underline hover:text-green-500">Health</div>
             <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
@@ -51,7 +51,7 @@
             </button>
         </div>
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
             <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
@@ -69,7 +69,7 @@
                 <h1 class="text-3xl font-bold">Ayush Herb</h1>
             </div>
             <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
-                <a href="../index.html">
+                <a href="../index.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-house"></i></div>
                         <div><h2>Home</h2></div>
@@ -81,13 +81,13 @@
                         <div><h2>My Herb</h2></div>
                     </div>
                 </a>
-                <a href="../index.html">
+                <a href="../index.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-magnifying-glass"></i></div>
                         <div><h2>Explore Herbs</h2></div>
                     </div>
                 </a>
-                <a href="gardeningtips.html">
+                <a href="gardeningtips.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-seedling"></i></div>
                         <div><h2>Gardening Tips</h2></div>
@@ -120,14 +120,14 @@
                         <div class="text-gray-600 text-lg"><p>Check out your saved herbs and their details.</p></div>
                     </div>
                 </a>
-                <a href="../index.html">
+                <a href="../index.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-magnifying-glass"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Explore New Herbs</h1></div>
                         <div class="text-gray-600 text-lg"><p>Discover new herbs and their benefits.</p></div>
                     </div>
                 </a>
-                <a href="gardeningtips.html">
+                <a href="gardeningtips.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-seedling"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Gardening Tips</h1></div>
