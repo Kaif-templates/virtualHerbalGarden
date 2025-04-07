@@ -91,7 +91,7 @@
                         <div><h2>Manage Herbs</h2></div>
                     </div>
                 </a>
-                <a href=".community.php">
+                <a href="./community.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
                         <div><i class="fa-solid fa-comments"></i></div>
                         <div><h2>Community Forum</h2></div>
