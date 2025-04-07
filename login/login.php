@@ -30,7 +30,7 @@ if (isset($_SESSION['user_email'])) {
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <div class="hover:underline hover:text-green-500">Health</div>
+            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
         </div>
@@ -47,7 +47,7 @@ if (isset($_SESSION['user_email'])) {
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
             <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
-            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
+            <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
             <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
         </div>
