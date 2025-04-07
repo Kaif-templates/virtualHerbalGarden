@@ -15,7 +15,7 @@
     <nav id="navbar" class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
-           AYUSH Herb
+           Ayush Herb
         </div>
     
         <!-- Desktop Menu -->
@@ -45,9 +45,13 @@
         <div class="hidden lg:flex space-x-3">
             <i class="fa-solid fa-magnifying-glass my-auto text-lg text-green-800"></i>
             <input type="text" class="flex-grow p-2 border rounded-xl border-green-300 placeholder:text-gray-400" placeholder="Search for plants...">
-            <button class="px-4 py-2 border border-green-800 text-green-800 rounded-xl bg-green-50 hover:bg-green-800 hover:text-white transition-colors duration-200">
-                <i class="fa-solid fa-question-circle mr-2"></i>Quiz
-            </button>
+
+            <a href="http://localhost/project/quizz/quiz.php" class="inline-block">
+                <div class="px-4 py-2 border border-green-800 text-green-800 rounded-xl bg-green-50 hover:bg-green-800 hover:text-white transition-colors duration-200 flex items-center">
+                  <i class="fas fa-question-circle mr-2"></i> Quiz
+                </div>
+              </a>
+              
         </div>
     
         
@@ -81,8 +85,8 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-4 sm:mx-8 md:mx-12 lg:mx-16 mt-12 md:mt-16 lg:mt-28 gap-6">
 
 
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/aloevera.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover " alt="Aloe Vera" onclick="openModal()">
+            <div  class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
+                <img src="./assets/aloevera.jpg" alt="Aloe Vera"  class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover " alt="Aloe Vera" onclick="openModal('plantModal1') ">
 
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Aloe Vera</p>
@@ -93,7 +97,7 @@
 
 
             <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/ashwagandha.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
+                <img src="./assets/ashwagandha.jpg" alt="Ashwagandha" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover" onclick="openModal('plantModal2')">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700">Ashwagandha</p>
                     <p class="text-gray-500">Shrub</p>
@@ -103,7 +107,7 @@
 
 
             <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/cactus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
+                <img src="./assets/cactus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover" onclick="openModal('plantModal3')">
                 <div class="px-4 py-2">
                     <p class="font-bold text-2xl text-gray-700"> Cactus</p>
                     <p class="text-gray-500">Succulent</p>
@@ -274,7 +278,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
         
         <div class="flex justify-center lg:justify-start">
-            <img src="./assets/logo.png" alt="Ayurherb Logo" class="h-20">
+            <h1 class="text-6xl font-bold font-sans">Ayush Herb</h1>
         </div>
 
         
@@ -334,9 +338,9 @@
 
     <!-- Modal Hidden by Default -->
     <div id="plantModal1"
-        class="fixed top-0 left-0 w-full h-full bg-black bg-transparent flex items-center justify-center hidden">
+        class="fixed top-0 left-0 w-full h-full  bg-transparent flex items-center justify-center hidden">
         <div class="bg-white rounded-lg w-3/4 h-screen p-4 relative overflow-hidden">
-            <button onclick="closeModal()"
+            <button onclick="closeModal('plantModal1')"
                 class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
 
             <div class="flex flex-col md:flex-row gap-4 h-full">
@@ -400,6 +404,90 @@
                     <!-- Audio -->
                     <audio controls class="w-full">
                         <source src="./audio/aloe vera.mp3" type="audio/mpeg">
+                    </audio>
+
+                    <!-- Notes -->
+                    <label for="notes" class="text-gray-700 font-bold">Notes:</label>
+                    <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-56"
+                        placeholder="Write your notes here..."></textarea>
+
+                    <!-- Buttons -->
+                    <div class="flex gap-3 mt-2">
+                       <a href="./assets/aloevera.jpg" ><button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button></a>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
+                        <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Plant 2 -->
+    
+    <div id="plantModal2"
+        class="fixed top-0 left-0 w-full h-full  bg-transparent flex items-center justify-center hidden">
+        <div class="bg-white rounded-lg w-3/4 h-screen p-4 relative overflow-hidden">
+            <button onclick="closeModal('plantModal2')"
+                class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
+
+            <div class="flex flex-col md:flex-row gap-4 h-full">
+
+                
+                <div class="w-full md:w-1/2 flex flex-col overflow-y-auto pr-2 ">
+                    <iframe title="Ficus ginseng" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking" xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="w-full" height="50%" src="https://sketchfab.com/models/88b1bf03a6254dc2b56cec4dce3f22f1/embed"> </iframe> 
+
+                    <div class="overflow-x-auto flex gap-3 pb-2 ">
+                        <img src="./assets/aloevera2.jpg" class="w-full h-60 rounded-lg object-cover">
+                        
+                        <img src="./assets/aloevera3.jpg" class=" h-60 rounded-lg object-cover">
+                        <img src="./assets/aloevera4.jpg" class=" h-60 rounded-lg object-cover">
+                    </div>
+                </div>
+
+                <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
+
+                    <h2 class="text-2xl font-bold">Ashwagandha</h2>
+
+                    <div class=" flex flex-col gap-3 overflow-y-auto pr-2 h-2/4 w-full text-xl">
+                        <p class="text-gray-700">Ashwagandha (Withania somnifera), also known as Indian ginseng or winter cherry, is a highly valued herb in Ayurvedic medicine. It is known for its adaptogenic properties, helping the body resist stress, enhance energy levels, and improve overall well-being.</p>
+                        <p class="text-gray-700"><strong>Region:</strong> Arid</p>
+                        <p class="text-gray-700"><strong>Common Names:</strong>  Sanskrit: Ashwagandha (meaning "smell of horse") Hindi: Asgandh English: Indian Ginseng, Winter Cherry Tamil: Amukkara Telugu: Penneru Gadda</p>
+                        <p class="text-gray-700"><strong>Type:</strong>Shrub</p>
+
+                        <p class="text-gray-700"><strong> Habitat:</strong> FHabitat: Thrives in dry and subtropical climates. Found naturally in rocky and sandy soils, such as in parts of Rajasthan, Madhya Pradesh, and Gujarat in India. </p>
+                        <p class="text-gray-700"><strong> Botanical Name:</strong> Withania somnifera</p>
+                        <p class="text-gray-700"><strong> Medicinal Uses:</strong> Ashwagandha has been used in Ayurvedic medicine for centuries to treat various ailments: Stress relief: Reduces cortisol levels, helping alleviate stress and anxiety. Energy and stamina: Boosts physical endurance and energy levels. Cognitive function: Improves memory, concentration, and mental clarity. Immunity: Enhances the body’s immune system. Anti-inflammatory: Helps with conditions like arthritis. Sleep aid: Promotes restful sleep and treats insomnia. Hormonal balance: Improves reproductive health and fertility.</p>
+
+                        <p class="text-gray-700"><strong>Methods of Cultivation:</strong> Climate Requirements: Grows best in semi-arid and subtropical regions. Requires moderate rainfall (600-750 mm), but too much water can harm the plant. Can tolerate temperatures between 20°C to 35°C. Soil Requirements: Prefers well-drained sandy or loamy soil with good aeration. pH range: 7.5 to 8 (neutral to slightly alkaline). Propagation: Grown from seeds: Seeds are sown directly in the soil or started in nursery beds. Optimal seed rate: 5-7 kg per hectare. Planting Season: Best sown during the early monsoon season (June-July). Transplanting can be done once seedlings are 30-35 days old. Irrigation: Requires minimal water; irrigation is needed only during dry spells. Overwatering can lead to root rot. Pest and Disease Control: Susceptible to leaf spot disease and root rot in poorly drained soils. Insects like aphids can be controlled with organic insecticides. Harvesting: Ready for harvest 150-180 days after planting. Roots are the primary medicinal part. They are dug out, cleaned, dried, and processed. Yields around 400-500 kg of roots per hectare.</p>
+
+                        <p class="text-gray-700"> <strong> ExtractionProcess: </strong>
+
+                        </p>
+
+                        <p class="text-gray-700"> <strong> Environmental Impact: </strong>
+                        </p>
+                        
+                        <p class="text-gray-700"><strong> Reasons To Grow Outdoors: </strong>Natural Habitat: Aloe Vera is a desert plant, so it naturally thrives in hot, arid environments with plenty of sunlight. Larger Growth: Outdoor Aloe Vera plants can grow larger and produce more "pups" (offshoots) that can be replanted. Direct Sunlight: Outdoors, Aloe Vera can enjoy full sunlight (6-8 hours) and will grow more vigorously. Minimal Watering: Outdoor Aloe Vera requires little water and is drought-tolerant, making it easy to care for in dry climates. Where to Place Aloe Vera Outdoors: Sunlight: Place it in an area where it receives full sun but ensure it's protected from intense afternoon heat in extremely hot climates. Soil: Plant it in well-drained, sandy, or loamy soil. Raised beds or pots with good drainage are ideal. Temperature: It should be placed in a spot where the temperature stays between 25°C to 40°C (77°F to 104°F). Aloe Vera cannot tolerate frost or freezing temperatures, so if you live in a cooler climate, bring the plant indoors during winter or cover it. Why Aloe Vera Helps in Both Settings: Indoors: Aloe Vera improves air quality and offers easy access to its gel for skincare or minor burns, cuts, and insect bites. Outdoors: Aloe Vera benefits from the natural sun, thriving in warm climates and contributing to outdoor garden aesthetics. It's drought-tolerant and helps in soil conservation due to its root system.
+                        </p>
+
+
+                        <p class="text-gray-700"><strong> Nutritional Benefits:</strong> Minerals: Contains calcium, magnesium, zinc, chromium, sodium, iron, potassium, and manganese. Amino Acids: Out of the 22 essential amino acids required by humans, Aloe Vera provides 18. Fatty Acids: Includes both cholesterol-lowering and anti-inflammatory fatty acids. Enzymes: The gel contains various enzymes like lipase and amylase that assist in the breakdown of sugars and fats.
+                        </p>
+
+
+                        <p class="text-gray-700"><strong> Products: </strong>Aloe Vera is used in a variety of forms in the market: Aloe Vera Gel: Used in skincare and for direct application to burns, cuts, and other skin conditions. Aloe Vera Juice: Consumed for digestive benefits and detoxification. Aloe Vera Powder: Used in making capsules, supplements, and cosmetics. Aloe Vera Creams and Lotions: Used in beauty products to hydrate, soothe, and rejuvenate the skin. Aloe Vera Capsules/Tablets: Available as dietary supplements for general health and wellness. Future Trends in Aloe Vera Research: Nanotechnology: Research is exploring the use of Aloe Vera in nanoparticle production for drug delivery systems. Bioplastics: The gel and fibers of Aloe Vera are being studied for their potential use in creating biodegradable plastics. Agricultural Applications: Aloe Vera extracts are being explored as natural pesticides and fertilizers due to their antimicrobial properties.Indoor Plant: Aloe Vera is an excellent indoor plant, especially for homes or offices where you want to enjoy its air-purifying qualities and easy care.
+                        </p>
+                        
+                       
+                        
+                    </div>
+
+
+                    <!-- Audio -->
+                    <audio controls class="w-full">
+                        <source src="./audio/ashwaganda.mp3" type="audio/mpeg">
                     </audio>
 
                     <!-- Notes -->
