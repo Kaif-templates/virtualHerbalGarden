@@ -25,7 +25,7 @@
             <a href="../login/login.php">
          <div class="hover:underline hover:text-green-500">Login</div></a>
 
-            <div class="hover:underline hover:text-green-500">Health</div>
+            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="./community.html">
             <div class="hover:underline hover:text-green-500">Community</div>
             </a>
@@ -55,7 +55,7 @@
             <a href="../login/login.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
             </a>
-            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
+            <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="./community.html">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
             </a>
