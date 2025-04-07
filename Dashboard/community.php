@@ -44,12 +44,12 @@
     ?>
 
     <!-- Navigation Bar -->
-    <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
+    <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow">
         <div class="text-4xl text-green-800 font-semibold font-mono">
             AYUSH Herb
         </div>
-        <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
+        <div class=" space-x-6 text-green-900 text-lg hidden md:flex">
+            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
@@ -68,8 +68,8 @@
                 <i class="fa-solid fa-question-circle mr-2"></i>Quiz
             </button>
         </div>
-        <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+        <div class="flex-col bg-white absolute top-14 left-0 w-full shadow-md md:hidden" id="mobile-menu">
+            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>

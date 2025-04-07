@@ -21,7 +21,7 @@
         <!-- Desktop Menu -->
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
 
-            <a href="./index.html">
+            <a href="./index.php">
             <div class="hover:underline hover:text-green-500">Home</div></a>
 
             <a href="./login/login.php">
