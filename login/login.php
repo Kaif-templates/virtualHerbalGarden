@@ -5,9 +5,9 @@ session_start();
 // Redirect if already logged in
 if (isset($_SESSION['user_email'])) {
     if ($_SESSION['is_admin']) {
-        header("Location: ../Arun/admin1.php");
+        header("Location: ../Dashboard/admin1.php");
     } else {
-        header("Location: ../Arun/dashboard.php");
+        header("Location: ../Dashboard/dashboard.php");
     }
     exit();
 }
@@ -31,8 +31,8 @@ if (isset($_SESSION['user_email'])) {
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <div class="hover:underline hover:text-green-500">Health</div>
-            <a href="../Arun/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
-            <a href="../Arun/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
+            <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
             <i class="fa-solid fa-bars text-xl"></i>
@@ -48,8 +48,8 @@ if (isset($_SESSION['user_email'])) {
             <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
-            <a href="../Arun/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
-            <a href="../Arun/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
+            <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
         </div>
     </nav>
 
@@ -81,7 +81,7 @@ if (isset($_SESSION['user_email'])) {
                         $_SESSION['is_admin'] = true;
                         $stmt->close();
                         $conn->close();
-                        header("Location: ../Arun/admin1.php");
+                        header("Location: ../Dashboard/admin1.php");
                         exit();
                     } else {
                         echo '<p class="text-red-500 mt-4">Invalid admin email or password!</p>';
@@ -100,7 +100,7 @@ if (isset($_SESSION['user_email'])) {
                         $_SESSION['is_admin'] = false;
                         $stmt->close();
                         $conn->close();
-                        header("Location: ../Arun/dashboard.php");
+                        header("Location: ../Dashboard/dashboard.php");
                         exit();
                     } else {
                         echo '<p class="text-red-500 mt-4">Invalid user email or password!</p>';
