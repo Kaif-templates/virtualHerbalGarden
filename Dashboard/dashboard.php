@@ -167,10 +167,10 @@
             </div>
 
             <!-- Latest News Section (Unchanged) -->
-            <div class="bg-green-200 mt-10 p-8 rounded-xl space-y-4 shadow-xl">
+            <!-- <div class="bg-green-200 mt-10 p-8 rounded-xl space-y-4 shadow-xl">
                 <h1 class="text-2xl text-green-900 font-bold">Latest News</h1>
                 <p class="text-red-400 font-semibold">We will update soon. Stay Alert</p>
-            </div>
+            </div> -->
         </div>
     </div>
 
