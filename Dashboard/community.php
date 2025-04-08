@@ -136,6 +136,61 @@
         </div>
     </div>
 
+
+    
+<!-- Footer Section -->
+<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2 border mt-6">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+        
+        <div class="flex justify-center lg:justify-start">
+            <h1 class="text-6xl font-bold font-sans">Ayush Herb</h1>
+        </div>
+
+        
+        <div class="text-center lg:text-left">
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+                <i class="fa-solid fa-location-dot text-green-800 text-2xl mr-4"></i>
+                <p class="text-lg text-green-800">
+                    <span class="block">Lovely Professional University,</span>
+                    Jalandhar, 144411 (Punjab)
+                </p>
+            </div>
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+                <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
+                <p class="text-lg text-green-800">2784alok@gmail.com</p>
+            </div>
+        </div>
+
+        
+        <div class="text-center lg:text-left">
+            <span class="text-xl font-bold text-green-800">Technology Stack Used:</span>
+            <div class="flex justify-center lg:justify-start mt-6 space-x-4">
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fab fa-node-js text-4xl text-green-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fas fa-database text-4xl text-yellow-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fas fa-vr-cardboard text-4xl text-purple-500"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
+                </a>
+                <a href="#" class="text-3xl hover:text-sub-color">
+                    <i class="fa-brands fa-php text-4xl text-blue-500"></i>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    
+    <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium">
+        © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by Alok, Arun, Kaif & Gaurav
+    </h3>
+</footer>
+
     <?php $conn->close(); ?>
 </body>
 </html>

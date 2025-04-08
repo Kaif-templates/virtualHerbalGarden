@@ -26,15 +26,10 @@
 
             <a href="./login/login.php">
          <div class="hover:underline hover:text-green-500">Login</div></a>
-<<<<<<< HEAD:index.html
-            <a href="./Health/health.html">
-            <div class="hover:underline hover:text-green-500">Health</div></a>
-=======
             
             <a href="./Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
 
             <a href="./Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
->>>>>>> 03345c7539cb77ec7ca8f4e9e21913d49b1e372a:index.php
 
             <a href="./Dashboard/dashboard.php">
                 <div class="hover:underline hover:text-green-500">Dashboard</div>
@@ -85,7 +80,7 @@
                 <img src="./assets/herbs img.jpg" alt="Nature" class="h-64 md:h-5/6 rounded-full object-cover lg:mb-20 lg:ml-32 ">
             </div>
         </div>
-    
+
         <!-- Plant Listing Section -->
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-4 sm:mx-8 md:mx-12 lg:mx-16 mt-12 md:mt-16 lg:mt-28 gap-6">
 
