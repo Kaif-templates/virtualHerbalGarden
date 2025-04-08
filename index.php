@@ -92,7 +92,7 @@
                     <p class="font-bold text-2xl text-gray-700">Aloe Vera</p>
                     <p class="text-gray-500">Succulent</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -102,7 +102,7 @@
                     <p class="font-bold text-2xl text-gray-700">Ashwagandha</p>
                     <p class="text-gray-500">Shrub</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -112,7 +112,7 @@
                     <p class="font-bold text-2xl text-gray-700"> Cactus</p>
                     <p class="text-gray-500">Succulent</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -122,7 +122,7 @@
                     <p class="font-bold text-2xl text-gray-700">Dandelion</p>
                     <p class="text-gray-500">Flowering Plant</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -132,7 +132,7 @@
                     <p class="font-bold text-2xl text-gray-700">Eucalyptus</p>
                     <p class="text-gray-500">Tree</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
             
@@ -142,7 +142,7 @@
                     <p class="font-bold text-2xl text-gray-700">Ginger</p>
                     <p class="text-gray-500">Herb</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -154,7 +154,7 @@
 
                     </p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -164,7 +164,7 @@
                     <p class="font-bold text-2xl text-gray-700">Lavender</p>
                     <p class="text-gray-500">Flowering Plant</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -174,7 +174,7 @@
                     <p class="font-bold text-2xl text-gray-700">Neem</p>
                     <p class="text-gray-500">Tree</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -184,7 +184,7 @@
                     <p class="font-bold text-2xl text-gray-700">Rosemary</p>
                     <p class="text-gray-500">Herb</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -194,7 +194,7 @@
                     <p class="font-bold text-2xl text-gray-700">Sage</p>
                     <p class="text-gray-500">Herb</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
 
 
@@ -205,7 +205,7 @@
                     </p>
                     <p class="text-gray-500">Herb</p>
                 </div>
-                <i class="fa-solid fa-bookmark text-2xl text-gray-600 absolute bottom-12 right-6"></i>
+                 
             </div>
             
            
@@ -299,21 +299,19 @@
         
         <div class="text-center lg:text-left">
             <span class="text-xl font-bold text-green-800">Technology Stack Used:</span>
-            <div class="flex justify-center lg:justify-start mt-6 space-x-4">
-                <a href="#" class="text-3xl hover:text-sub-color">
+            <div class="flex justify-center lg:justify-start mt-6 space-x-6">
+                <a href="#" class="text-4xl hover:text-green-600">
                     <i class="fab fa-node-js text-4xl text-green-500"></i>
                 </a>
-                <a href="#" class="text-3xl hover:text-sub-color">
+                <a href="#" class="text-4xl hover:text-green-600">
                     <i class="fas fa-database text-4xl text-yellow-500"></i>
                 </a>
-                <a href="#" class="text-3xl hover:text-sub-color">
-                    <i class="fas fa-vr-cardboard text-4xl text-purple-500"></i>
+                
+                <a href="#" class="text-4xl hover:text-green-600">
+                    <i class="fab fa-css3-alt text-4xl text-blue-600 "></i>
                 </a>
-                <a href="#" class="text-3xl hover:text-sub-color">
-                    <i class="fab fa-css3-alt text-4xl text-blue-600"></i>
-                </a>
-                <a href="#" class="text-3xl hover:text-sub-color">
-                    <i class="fa-brands fa-php text-4xl text-blue-500"></i>
+                <a href="#" class="text-4xl hover:text-green-600">
+                    <i class="fa-brands fa-php text-5xl text-blue-500"></i>
                 </a>
             </div>
         </div>
