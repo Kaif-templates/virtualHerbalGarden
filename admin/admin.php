@@ -32,11 +32,11 @@
             AYUSH Herb
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <div class="hover:underline hover:text-green-500">Health</div>
-            <a href="../arun/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
-            <a href="../arun/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
+            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <a href="./admin.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
@@ -50,11 +50,11 @@
             </button>
         </div>
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
-            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
-            <a href="../arun/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
-            <a href="../arun/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
+            <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
+            <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
             <a href="./admin.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
         </div>
     </nav>
@@ -67,13 +67,13 @@
             <h1 class="text-3xl font-bold">Ayush Herb</h1>
         </div>
         <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
-            <a href="../index.html">
+            <a href="../index.php">
                 <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                     <div><i class="fa-solid fa-house"></i></div>
                     <div><h2>Home</h2></div>
                 </div>
             </a>
-            <a href="../arun/dashboard.php">
+            <a href="../Dashboard/dashboard.php">
                 <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                     <div><i class="fa-solid fa-user"></i></div>
                     <div><h2>User Dashboard</h2></div>
@@ -91,7 +91,7 @@
                     <div><h2>Manage Herbs</h2></div>
                 </div>
             </a>
-            <a href="../arun/community.php">
+            <a href="../Dashboard/community.php">
                 <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
                     <div><i class="fa-solid fa-comments"></i></div>
                     <div><h2>Community Forum</h2></div>

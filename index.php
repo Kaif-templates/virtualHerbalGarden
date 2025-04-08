@@ -21,17 +21,22 @@
         <!-- Desktop Menu -->
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
 
-            <a href="./index.html">
+            <a href="./index.php">
             <div class="hover:underline hover:text-green-500">Home</div></a>
 
             <a href="./login/login.php">
          <div class="hover:underline hover:text-green-500">Login</div></a>
+<<<<<<< HEAD:index.html
             <a href="./Health/health.html">
             <div class="hover:underline hover:text-green-500">Health</div></a>
+=======
+            
+            <a href="./Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
 
-            <div class="hover:underline hover:text-green-500">Community</div>
+            <a href="./Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+>>>>>>> 03345c7539cb77ec7ca8f4e9e21913d49b1e372a:index.php
 
-            <a href="./Arun/dashboard.php">
+            <a href="./Dashboard/dashboard.php">
                 <div class="hover:underline hover:text-green-500">Dashboard</div>
             </a>
         </div>
@@ -60,11 +65,11 @@
             <a href="./login/login.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
             </a>
-            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
-            <a href="./Arun/community.html">
+            <a href="./Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
+            <a href="./Dashboard/community.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
             </a>
-            <a href="./Arun/dashboard.php">
+            <a href="./Dashboard/dashboard.php">
                 <div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div>
             </a>
         </div>

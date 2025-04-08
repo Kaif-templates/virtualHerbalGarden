@@ -16,11 +16,11 @@
             AyushHerb
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <div class="hover:underline hover:text-green-500">Health</div>
-            <a href="../Arun/community.html"><div class="hover:underline hover:text-green-500">Community</div></a>
-            <a href="../Arun/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
+            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
             <i class="fa-solid fa-bars text-xl"></i>
@@ -33,11 +33,11 @@
             </button>
         </div>
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
-            <div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div>
-            <a href="../Arun/community.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
-            <a href="../Arun/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
+            <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
+            <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
         </div>
     </nav>
 
