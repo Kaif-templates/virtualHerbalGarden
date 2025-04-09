@@ -27,7 +27,7 @@
             <a href="./login/login.php">
          <div class="hover:underline hover:text-green-500">Login</div></a>
             
-            <a href="./Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="./Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
 
             <a href="./Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
 
@@ -60,7 +60,7 @@
             <a href="./login/login.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
             </a>
-            <a href="./Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
+            <a href="./Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="./Dashboard/community.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
             </a>

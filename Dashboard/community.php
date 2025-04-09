@@ -51,7 +51,7 @@
         <div class=" space-x-6 text-green-900 text-lg hidden md:flex">
             <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
@@ -71,7 +71,7 @@
         <div class="flex-col bg-white absolute top-14 left-0 w-full shadow-md md:hidden" id="mobile-menu">
             <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
-            <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
+            <a href="../Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
