@@ -112,7 +112,7 @@
             <div class="text-3xl">
                 <h1 class="text-green-900 font-bold">Welcome Back, <?php echo htmlspecialchars($user_email); ?></h1>
             </div>
-            <div class="grid grid-rows lg:grid-cols-4 gap-5 mt-10">
+            <div class="grid grid-rows lg:grid-cols-3 gap-5 mt-10">
                 <!-- <a href="bookmark.html">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-leaf"></i></div>
@@ -124,21 +124,21 @@
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-magnifying-glass"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Explore New Herbs</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Discover new herbs and their benefits.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Discover new herbs and their<br> benefits.</p></div>
                     </div>
                 </a>
                 <a href="gardeningtips.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-seedling"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Gardening Tips</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Learn tips and tricks for herb gardening.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Learn tips and tricks for herb<br> gardening.</p></div>
                     </div>
                 </a>
                 <a href="community.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-comments"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Community Forum</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Join discussions with fellow herb enthusiasts.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Join discussions with fellow herb <br>enthusiasts.</p></div>
                     </div>
                 </a>
             </div>
