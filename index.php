@@ -502,7 +502,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     console.log("✅ JS Loaded");
 
-    fetch("http://localhost/ca/api/fetch_herbs.php")
+    fetch("./api/fetch_herbs.php")
         .then(response => response.json())
         .then(data => {
             console.log("✅ Herbs fetched:", data);
