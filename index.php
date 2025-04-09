@@ -166,7 +166,7 @@
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">2784alok@gmail.com</p>
+                <p class="text-lg text-green-800">kaag@gmail.com</p>
             </div>
         </div>
 
