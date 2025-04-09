@@ -55,7 +55,7 @@
             <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
-                <a href="./admin_dashboard.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
+                <a href="../dashboard/admin1.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
             <?php } ?>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
@@ -75,7 +75,7 @@
             <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
-                <a href="./admin_dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
+                <a href="../dashboard/admin1.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
             <?php } ?>
         </div>
     </nav>

@@ -82,136 +82,10 @@
         </div>
 
         <!-- Plant Listing Section -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 mx-4 sm:mx-8 md:mx-12 lg:mx-16 mt-12 md:mt-16 lg:mt-28 gap-6">
+        <div id="herbTilesContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 ml-8">
+    <!-- JavaScript will insert tiles here -->
+</div>
 
-
-            <div  class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/aloevera.jpg" alt="Aloe Vera"  class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover " alt="Aloe Vera" onclick="openModal('plantModal1') ">
-
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Aloe Vera</p>
-                    <p class="text-gray-500">Succulent</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/ashwagandha.jpg" alt="Ashwagandha" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover" onclick="openModal('plantModal2')">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Ashwagandha</p>
-                    <p class="text-gray-500">Shrub</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/cactus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover" onclick="openModal('plantModal3')">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700"> Cactus</p>
-                    <p class="text-gray-500">Succulent</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/dandelion2.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Dandelion</p>
-                    <p class="text-gray-500">Flowering Plant</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/eucalyptus.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Eucalyptus</p>
-                    <p class="text-gray-500">Tree</p>
-                </div>
-                 
-            </div>
-
-            
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/ginger.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Ginger</p>
-                    <p class="text-gray-500">Herb</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/hibiscus.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Hibiscus</p>
-                    <p class="text-gray-500">Flowering Plant
-
-                    </p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/lavender.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Lavender</p>
-                    <p class="text-gray-500">Flowering Plant</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/neem.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Neem</p>
-                    <p class="text-gray-500">Tree</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/rosemary.jpg" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Rosemary</p>
-                    <p class="text-gray-500">Herb</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/sage.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Sage</p>
-                    <p class="text-gray-500">Herb</p>
-                </div>
-                 
-            </div>
-
-
-            <div class="h-96 shadow-lg rounded-xl bg-white relative transform hover:scale-105 transition ease-in-out duration-200">
-                <img src="./assets/tulsi.webp" alt="Aloe Vera" class="px-4 pt-3 h-72 w-full rounded-t-2xl object-cover">
-                <div class="px-4 py-2">
-                    <p class="font-bold text-2xl text-gray-700">Tulsi
-                    </p>
-                    <p class="text-gray-500">Herb</p>
-                </div>
-                 
-            </div>
-            
-           
-        </div>
-    
-    
 
        <!-- Variety Section -->
 <div class="text-center mt-16 px-6 md:px-12 lg:px-20">
@@ -335,7 +209,7 @@
 
 
     <!-- Modal Hidden by Default -->
-    <div id="plantModal1"
+    <!-- <div id="plantModal1"
         class="fixed top-0 left-0 w-full h-full  bg-transparent flex items-center justify-center hidden">
         <div class="bg-white rounded-lg w-3/4 h-screen p-4 relative overflow-hidden">
             <button onclick="closeModal('plantModal1')"
@@ -399,17 +273,17 @@
                     </div>
 
 
-                    <!-- Audio -->
+                    
                     <audio controls class="w-full">
                         <source src="./audio/aloe vera.mp3" type="audio/mpeg">
                     </audio>
 
-                    <!-- Notes -->
+                    Notes 
                     <label for="notes" class="text-gray-700 font-bold">Notes:</label>
                     <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-56"
                         placeholder="Write your notes here..."></textarea>
 
-                    <!-- Buttons -->
+                     Buttons 
                     <div class="flex gap-3 mt-2">
                        <a href="./assets/aloevera.jpg" ><button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button></a>
                         <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
@@ -422,7 +296,6 @@
     </div>
 
 
-    <!-- Plant 2 -->
     
     <div id="plantModal2"
         class="fixed top-0 left-0 w-full h-full  bg-transparent flex items-center justify-center hidden">
@@ -483,17 +356,15 @@
                     </div>
 
 
-                    <!-- Audio -->
+                    
                     <audio controls class="w-full">
                         <source src="./audio/ashwaganda.mp3" type="audio/mpeg">
                     </audio>
 
-                    <!-- Notes -->
                     <label for="notes" class="text-gray-700 font-bold">Notes:</label>
                     <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-56"
                         placeholder="Write your notes here..."></textarea>
 
-                    <!-- Buttons -->
                     <div class="flex gap-3 mt-2">
                        <a href="./assets/aloevera.jpg" ><button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button></a>
                         <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
@@ -506,8 +377,6 @@
     </div>
 
 
-    <!-- Plant 3 -->
-    
     <div id="plantModal3"
         class="fixed top-0 left-0 w-full h-full  bg-transparent flex items-center justify-center hidden">
         <div class="bg-white rounded-lg w-3/4 h-screen p-4 relative overflow-hidden">
@@ -567,17 +436,14 @@
                     </div>
 
 
-                    <!-- Audio -->
                     <audio controls class="w-full">
                         <source src="./audio/ashwaganda.mp3" type="audio/mpeg">
                     </audio>
 
-                    <!-- Notes -->
                     <label for="notes" class="text-gray-700 font-bold">Notes:</label>
                     <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-56"
                         placeholder="Write your notes here..."></textarea>
 
-                    <!-- Buttons -->
                     <div class="flex gap-3 mt-2">
                        <a href="./assets/aloevera.jpg" ><button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button></a>
                         <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
@@ -587,7 +453,110 @@
 
             </div>
         </div>
+    </div> -->
+    <div id="plantModal1"
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
+    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-screen p-4 relative overflow-hidden">
+        <button onclick="closeModal('plantModal1')"
+            class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
+
+        <div class="flex flex-col md:flex-row gap-4 h-full">
+            <div class="w-full md:w-1/2 flex flex-col overflow-y-auto pr-2">
+                <iframe title="3D View" frameborder="0" allowfullscreen
+                    mozallowfullscreen="true" webkitallowfullscreen="true"
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
+                    width="100%" height="300px"
+                    src="https://sketchfab.com/models/66c6699e50ab4863989777f920a981dd/embed?dnt=1">
+                </iframe>
+
+                <div class="overflow-x-auto flex gap-3 pb-2 mt-2">
+                    <img src="./assets/aloevera2.jpg" class="w-full h-60 rounded-lg object-cover">
+                    <img src="./assets/aloevera3.jpg" class="h-60 rounded-lg object-cover">
+                    <img src="./assets/aloevera4.jpg" class="h-60 rounded-lg object-cover">
+                </div>
+            </div>
+
+            <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
+                <h2 class="text-2xl font-bold">Plant Name</h2>
+                <div class="dynamic-content text-xl overflow-y-auto h-[75%] pr-1">
+                    <!-- Dynamic content from JS -->
+                </div>
+
+                <label for="notes" class="text-gray-700 font-bold">Notes:</label>
+                <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-24"
+                    placeholder="Write your notes here..."></textarea>
+
+                <div class="flex gap-3 mt-2">
+                    <a href="./assets/aloevera.jpg">
+                        <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button>
+                    </a>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
+                    <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    console.log("✅ JS Loaded");
+
+    fetch("http://localhost/ca/api/fetch_herbs.php")
+        .then(response => response.json())
+        .then(data => {
+            console.log("✅ Herbs fetched:", data);
+            const container = document.getElementById("herbTilesContainer");
+
+            data.forEach(herb => {
+                const imagePath = herb.image.replace(/^(\.\.\/)+/, './');
+
+                const herbTile = document.createElement("div");
+                herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer";
+                herbTile.innerHTML = `
+                    <img src="${imagePath}" alt="${herb.name}" class="w-full h-40 object-cover rounded-t-md">
+                    <h3 class="text-xl font-bold mt-2">${herb.name}</h3>
+                    <p class="text-gray-600">${herb.region}</p>
+                `;
+
+                // On click: fill modal
+                herbTile.addEventListener("click", () => {
+                    const modal = document.getElementById("plantModal1");
+                    modal.querySelector("h2").textContent = herb.name;
+                    modal.querySelector("iframe").src = herb.model_url || "";
+                    modal.querySelectorAll("img")[1].src = imagePath;  // Update main image
+                    modal.querySelector(".text-xl").innerHTML = `
+                        <p><strong>Region:</strong> ${herb.region}</p>
+                        <p><strong>Common Names:</strong> ${herb.common_name}</p>
+                        <p><strong>Type:</strong> ${herb.type}</p>
+                        <p><strong>Habitat:</strong> ${herb.habitat}</p>
+                        <p><strong>Botanical Name:</strong> ${herb.botanical_name}</p>
+                        <p><strong>Medicinal Uses:</strong> ${herb.medicinal_uses}</p>
+                        <p><strong>Methods of Cultivation:</strong> ${herb.cultivation}</p>
+                        <p><strong>Extraction Process:</strong> ${herb.extraction}</p>
+                        <p><strong>Environmental Impact:</strong> ${herb.environmental_impact}</p>
+                        <p><strong>Reasons to Grow Outdoors:</strong> ${herb.reasons_to_grow}</p>
+                        <p><strong>Nutritional Benefits:</strong> ${herb.nutritional_benefits}</p>
+                        <p><strong>Products:</strong> ${herb.products}</p>
+                    `;
+                    modal.classList.remove("hidden");
+                });
+
+                container.appendChild(herbTile);
+            });
+        })
+        .catch(err => {
+            console.error("❌ Fetch Error:", err);
+        });
+});
+
+// Close Modal Function
+function closeModal(modalId) {
+    document.getElementById(modalId).classList.add("hidden");
+}
+
+</script>
+
 
     <script src="script.js"></script>
 </body>
