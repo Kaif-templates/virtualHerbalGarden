@@ -49,7 +49,7 @@
             AYUSH Herb
         </div>
         <div class=" space-x-6 text-green-900 text-lg hidden md:flex">
-            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
@@ -69,7 +69,7 @@
             </button>
         </div>
         <div class="flex-col bg-white absolute top-14 left-0 w-full shadow-md md:hidden" id="mobile-menu">
-            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
