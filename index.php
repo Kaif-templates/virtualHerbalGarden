@@ -166,11 +166,10 @@
                     Jalandhar, 144411 (Punjab)
                 </p>
             </div>
-            <div class="flex items-center justify-center lg:justify-start mb-4">
-                <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">kaag@gmail.com</p>
+            <div class="mt-4 sm:mt-6 text-lg sm:text-xl opacity-70">
+                Explore a wide variety of time-honored practices designed to promote holistic wellness and rejuvenate
+                your body and mind.
             </div>
-        </div>
 
                 
                 <div class="text-center lg:text-left">
@@ -213,8 +212,8 @@
     <!-- popup images codes -->
 
 <div id="plantModal1"
-    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden z-50" >
-    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-screen p-4 relative overflow-hidden">
+    class="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.3)] flex items-center justify-center hidden z-50" >
+    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-[85vh] p-4 relative overflow-hidden">
         <button onclick="closeModal('plantModal1')"
             class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
 
