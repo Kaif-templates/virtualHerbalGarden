@@ -53,8 +53,8 @@
             <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
-            <a href="./community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
-            <a href="./dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
+            <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
             <a href="./admin_dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
         </div>
     </nav>
@@ -73,7 +73,7 @@
                         <div><h2>Home</h2></div>
                     </div>
                 </a>
-                <a href="./dashboard.php">
+                <a href="../Dashboard/dashboard.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-user"></i></div>
                         <div><h2>User Dashboard</h2></div>
@@ -91,7 +91,7 @@
                         <div><h2>Manage Herbs</h2></div>
                     </div>
                 </a>
-                <a href="./community.php">
+                <a href="../Dashboard/community.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
                         <div><i class="fa-solid fa-comments"></i></div>
                         <div><h2>Community Forum</h2></div>

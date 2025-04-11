@@ -28,14 +28,15 @@
             <a href="../login/login.php">
                 <div class="hover:underline hover:text-green-500">Login</div>
             </a>
-
-            <div class="hover:underline hover:text-green-500">Health</div>
+            <a href="#">
+                <div class="hover:underline text-green-500">Health</div>
+            </a>
 
             <a href="../Dashboard/community.php">
                 <div class="hover:underline hover:text-green-500">Community</div>
             </a>
 
-            <a href="./Arun/dashboard.php">
+            <a href="../Dashboard/dashboard.php">
                 <div class="hover:underline hover:text-green-500">Dashboard</div>
             </a>
         </div>
@@ -234,8 +235,16 @@
         </div>
 
 
-        <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium">
-            © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by Alok, Arun, Kaif & Gaurav
+        <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold flex gap-1">
+            © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by 
+            <a href="https://github.com/2784alok" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
+                Alok </a> , 
+            <a href="https://github.com/Arun0041" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
+                Arun </a> , 
+            <a href="https://github.com/mkaifiqbal" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
+                Mohammad Kaif</a>  & 
+            <a href="https://github.com/Gaurav1A2B" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
+                Gaurav </a>
         </h3>
     </footer>
 

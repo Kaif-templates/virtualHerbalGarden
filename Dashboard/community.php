@@ -52,10 +52,10 @@
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
-            <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="./community.php"><div class="hover:underline text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
-                <a href="../dashboard/admin1.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
+                <a href="../admin/admin1.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
             <?php } ?>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
