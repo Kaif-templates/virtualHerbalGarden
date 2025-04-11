@@ -101,7 +101,7 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 mt-8 sm:mt-12">
                 
-                <div class="p-4 sm:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+                <div class="p-4 sm:p-6 bg-green-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-101 duration-300">
                     <div class="text-4xl sm:text-5xl mb-4 text-center">🌿</div>
                     <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Ayurveda</h3>
                     <p class="text-gray-600 text-sm sm:text-base text-center">
@@ -110,7 +110,7 @@
                     <p class="text-center font-bold text-green-600 mt-4">Find Your Balance</p>
                 </div>
 
-                <div class="p-4 sm:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+                <div class="p-4 sm:p-6 bg-yellow-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-101 duration-300">
                     <div class="text-4xl sm:text-5xl mb-4 text-center">🧘</div>
                     <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Yoga & Naturopathy</h3>
                     <p class="text-gray-600 text-sm sm:text-base text-center">
@@ -119,7 +119,7 @@
                     <p class="text-center font-bold text-yellow-600 mt-4">Connect Mind & Body</p>
                 </div>
 
-                <div class="p-4 sm:p-6 bg-indigo-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+                <div class="p-4 sm:p-6 bg-indigo-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-101 duration-300">
                     <div class="text-4xl sm:text-5xl mb-4 text-center">🌱</div>
                     <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Unani</h3>
                     <p class="text-gray-600 text-sm sm:text-base text-center">
@@ -128,7 +128,7 @@
                     <p class="text-center font-bold text-indigo-600 mt-4">Holistic Healing</p>
                 </div>
 
-                <div class="p-4 sm:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+                <div class="p-4 sm:p-6 bg-red-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-101 duration-300">
                     <div class="text-4xl sm:text-5xl mb-4 text-center">🌼</div>
                     <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Siddha</h3>
                     <p class="text-gray-600 text-sm sm:text-base text-center">
@@ -137,7 +137,7 @@
                     <p class="text-center font-bold text-red-600 mt-4">Ancient Wisdom, Modern Health</p>
                 </div>
 
-                <div class="p-4 sm:p-6 bg-teal-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-105 duration-300">
+                <div class="p-4 sm:p-6 bg-teal-50 rounded-lg shadow-md hover:shadow-lg transition-transform hover:scale-101 duration-300">
                     <div class="text-4xl sm:text-5xl mb-4 text-center">💧</div>
                     <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 mb-2 text-center">Homeopathy</h3>
                     <p class="text-gray-600 text-sm sm:text-base text-center">
@@ -166,10 +166,11 @@
                     Jalandhar, 144411 (Punjab)
                 </p>
             </div>
-            <div class="mt-4 sm:mt-6 text-lg sm:text-xl opacity-70">
-                Explore a wide variety of time-honored practices designed to promote holistic wellness and rejuvenate
-                your body and mind.
+            <div class="flex items-center justify-center lg:justify-start mb-4">
+                <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
+                <p class="text-lg text-green-800">kaag@gmail.com</p>
             </div>
+        </div>
 
                 
                 <div class="text-center lg:text-left">
@@ -213,7 +214,7 @@
 
 <div id="plantModal1"
     class="fixed top-0 left-0 w-full h-full bg-[rgba(0,0,0,0.3)] flex items-center justify-center hidden z-50" >
-    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-[85vh] p-4 relative overflow-hidden">
+    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-[90vh] p-4 relative overflow-hidden">
         <button onclick="closeModal('plantModal1')"
             class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
 
@@ -277,30 +278,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="text-gray-600">${herb.region}</p>
                 `;
 
-                // On click: open and fill modal
-                // On click: open and fill modal
                 herbTile.addEventListener("click", () => {
                     const modal = document.getElementById("plantModal1");
 
                     // Set text content
-
-                    // Set text content
                     modal.querySelector("h2").textContent = herb.name;
-
-                    // Set iframe (3D model view)
-                    document.getElementById("modelView").src = herb.frame_url || "";
-
-                    // Set images
-                    document.getElementById("mediaImg1").src = herb.img1 ? herb.img1.replace(/^(\.\.\/)+/, './') : "";
-                    document.getElementById("mediaImg2").src = herb.img2 ? herb.img2.replace(/^(\.\.\/)+/, './') : "";
-                    document.getElementById("mediaImg3").src = herb.img3 ? herb.img3.replace(/^(\.\.\/)+/, './') : "";
-
-                    // Set audio
-                    document.getElementById("audioPlayer").src = herb.audio_url ? herb.audio_url.replace(/^(\.\.\/)+/, './') : "";
-
-                    // Set detailed description
-                    document.getElementById("plantBio").innerHTML = `
-                        <p>${herb.bio}</p>
 
                     // Set iframe (3D model view)
                     document.getElementById("modelView").src = herb.frame_url || "";
@@ -322,7 +304,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p><strong>Botanical Name:</strong> ${herb.botanical_name}</p>
                         <p><strong>Medicinal Uses:</strong> ${herb.medicinal_use}</p>
                         <p><strong>Methods of Cultivation:</strong> ${herb.cultivation}</p>
-                        
                     `;
 
                     // Show modal
@@ -341,6 +322,7 @@ document.addEventListener("DOMContentLoaded", () => {
 function closeModal(modalId) {
     document.getElementById(modalId).classList.add("hidden");
 }
+
 </script>
 
 
