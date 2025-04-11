@@ -463,6 +463,7 @@
         <div class="flex flex-col md:flex-row gap-4 h-full">
             <div class="w-full md:w-1/2 flex flex-col overflow-y-auto pr-2">
                 <iframe title="3D View" frameborder="0" allowfullscreen
+                
                     mozallowfullscreen="true" webkitallowfullscreen="true"
                     allow="autoplay; fullscreen; xr-spatial-tracking"
                     xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share
