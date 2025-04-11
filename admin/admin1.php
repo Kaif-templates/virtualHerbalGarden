@@ -35,8 +35,8 @@
             <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
-            <a href="./community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
-            <a href="./dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
+            <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
+            <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <a href="./admin_dashboard.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">

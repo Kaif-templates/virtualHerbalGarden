@@ -454,7 +454,7 @@
             </div>
         </div>
     </div> -->
-    <div id="plantModal1"
+    <!-- <div id="plantModal1"
     class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
     <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-screen p-4 relative overflow-hidden">
         <button onclick="closeModal('plantModal1')"
@@ -480,7 +480,7 @@
             <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
                 <h2 class="text-2xl font-bold">Plant Name</h2>
                 <div class="dynamic-content text-xl overflow-y-auto h-[75%] pr-1">
-                    <!-- Dynamic content from JS -->
+                    
                 </div>
 
                 <label for="notes" class="text-gray-700 font-bold">Notes:</label>
@@ -497,12 +497,56 @@
             </div>
         </div>
     </div>
+</div> -->
+<div id="plantModal1"
+    class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center hidden z-50" >
+    <div class="bg-white rounded-lg w-11/12 md:w-3/4 h-screen p-4 relative overflow-hidden">
+        <button onclick="closeModal('plantModal1')"
+            class="absolute top-2 right-3 text-3xl font-bold text-gray-700">&times;</button>
+
+        <div class="flex flex-col md:flex-row gap-4 h-full">
+            <!-- Left Column: Media -->
+            <div class="w-full md:w-1/2 flex flex-col overflow-y-auto pr-2">
+                <iframe id="modelView" title="3D View" frameborder="0" allowfullscreen
+                    allow="autoplay; fullscreen; xr-spatial-tracking"
+                    class="w-full h-[300px] rounded-md">
+                </iframe>
+
+                <audio id="audioPlayer" controls class="my-2 w-full"></audio>
+
+                <div class="overflow-x-auto flex gap-3 pb-2 mt-2">
+                    <img id="mediaImg1" class="w-full h-60 rounded-lg object-cover">
+                    <img id="mediaImg2" class="h-60 rounded-lg object-cover">
+                    <img id="mediaImg3" class="h-60 rounded-lg object-cover">
+                </div>
+            </div>
+
+            <!-- Right Column: Text Content -->
+            <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
+                <h2 id="plantName" class="text-2xl font-bold">Plant Name</h2>
+                <div id="plantBio" class="text-xl overflow-y-auto h-[75%] pr-1">
+                    <!-- Dynamic content from DB -->
+                </div>
+
+                <label for="notes" class="text-gray-700 font-bold">Notes:</label>
+                <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-24"
+                    placeholder="Write your notes here..."></textarea>
+
+                <div class="flex gap-3 mt-2">
+                    <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button>
+                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
+                    <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     console.log("✅ JS Loaded");
 
-    fetch("http://localhost/ca/api/fetch_herbs.php")
+    fetch("./api/fetch_herbs.php")
         .then(response => response.json())
         .then(data => {
             console.log("✅ Herbs fetched:", data);
@@ -519,13 +563,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     <p class="text-gray-600">${herb.region}</p>
                 `;
 
-                // On click: fill modal
+                // On click: open and fill modal
                 herbTile.addEventListener("click", () => {
                     const modal = document.getElementById("plantModal1");
+
+                    // Set text content
                     modal.querySelector("h2").textContent = herb.name;
-                    modal.querySelector("iframe").src = herb.model_url || "";
-                    modal.querySelectorAll("img")[1].src = imagePath;  // Update main image
-                    modal.querySelector(".text-xl").innerHTML = `
+
+                    // Set iframe (3D model view)
+                    document.getElementById("modelView").src = herb.frame_url || "";
+
+                    // Set images
+                    document.getElementById("mediaImg1").src = herb.img1 ? herb.img1.replace(/^(\.\.\/)+/, './') : "";
+                    document.getElementById("mediaImg2").src = herb.img2 ? herb.img2.replace(/^(\.\.\/)+/, './') : "";
+                    document.getElementById("mediaImg3").src = herb.img3 ? herb.img3.replace(/^(\.\.\/)+/, './') : "";
+
+                    // Set audio
+                    document.getElementById("audioPlayer").src = herb.audio_url ? herb.audio_url.replace(/^(\.\.\/)+/, './') : "";
+
+                    // Set detailed description
+                    document.getElementById("plantBio").innerHTML = `
+                        <p>${herb.bio}</p>
                         <p><strong>Region:</strong> ${herb.region}</p>
                         <p><strong>Common Names:</strong> ${herb.common_name}</p>
                         <p><strong>Type:</strong> ${herb.type}</p>
@@ -539,6 +597,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         <p><strong>Nutritional Benefits:</strong> ${herb.nutritional_benefits}</p>
                         <p><strong>Products:</strong> ${herb.products}</p>
                     `;
+
+                    // Show modal
                     modal.classList.remove("hidden");
                 });
 
@@ -554,8 +614,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function closeModal(modalId) {
     document.getElementById(modalId).classList.add("hidden");
 }
-
 </script>
+
 
 
     <script src="script.js"></script>

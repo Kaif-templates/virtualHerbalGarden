@@ -5,7 +5,7 @@ session_start();
 // Redirect if already logged in
 if (isset($_SESSION['user_email'])) {
     if ($_SESSION['is_admin']) {
-        header("Location: ../Dashboard/admin1.php");
+        header("Location: ../admin/admin1.php");
     } else {
         header("Location: ../Dashboard/dashboard.php");
     }
@@ -81,7 +81,7 @@ if (isset($_SESSION['user_email'])) {
                         $_SESSION['is_admin'] = true;
                         $stmt->close();
                         $conn->close();
-                        header("Location: ../Dashboard/admin1.php");
+                        header("Location: ../admin/admin1.php");
                         exit();
                     } else {
                         echo '<p class="text-red-500 mt-4">Invalid admin email or password!</p>';
