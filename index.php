@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const herbTile = document.createElement("div");
                 herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer";
                 herbTile.innerHTML = `
-                    <img src="${imagePath}" alt="${herb.name}" class="w-full h-50 object-cover rounded-t-md">
+                    <img src="${imagePath}" alt="${herb.name}" class="w-full h-60 object-cover rounded-t-md">
                     <h3 class="text-xl font-bold mt-2">${herb.name}</h3>
                     <p class="text-gray-600">${herb.region}</p>
                 `;
