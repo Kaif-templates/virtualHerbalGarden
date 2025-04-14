@@ -168,7 +168,7 @@
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">kaag@gmail.com</p>
+                <p class="text-lg text-green-800">Ayushherb@gmail.com</p>
             </div>
         </div>
 
@@ -195,7 +195,7 @@
             </div>
 
             
-            <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold flex gap-1">
+            <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold flex gap-1 justify-center">
                 © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by 
                 <a href="https://github.com/2784alok" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
                     Alok </a> , 
@@ -248,7 +248,7 @@
 
                 <div class="flex gap-3 mt-2">
                     <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button>
-                    <button class="bg-green-500 text-white px-4 py-2 rounded-md">Share</button>
+                    
                     <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
                 </div>
             </div>
@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const imagePath = herb.image.replace(/^(\.\.\/)+/, './');
 
                 const herbTile = document.createElement("div");
-                herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer";
+                herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-xl";
                 herbTile.innerHTML = `
                     <img src="${imagePath}" alt="${herb.name}" class="w-full h-60 object-cover rounded-t-md">
                     <h3 class="text-xl font-bold mt-2">${herb.name}</h3>
