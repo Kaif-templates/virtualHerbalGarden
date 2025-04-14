@@ -37,7 +37,7 @@
             <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
-            <a href="./admin_dashboard.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
+            <a href="./admin.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
         </div>
         <div class="md:hidden cursor-pointer" id="menu-btn">
             <i class="fa-solid fa-bars text-xl"></i>
@@ -55,7 +55,7 @@
             <a href="../Health/health.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
             <a href="../Dashboard/dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Dashboard</div></a>
-            <a href="./admin_dashboard.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
+            <a href="./admin.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Admin</div></a>
         </div>
     </nav>
 
@@ -79,7 +79,7 @@
                         <div><h2>User Dashboard</h2></div>
                     </div>
                 </a>
-                <a href="./admin_users.php">
+                <a href="./users.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-users"></i></div>
                         <div><h2>Manage Users</h2></div>
@@ -218,7 +218,7 @@
                         $stmt->close();
                     }
 
-                    $result = $conn->query("SELECT id, user_email, content FROM forum_posts WHERE is_reported = 1 LIMIT 3");
+                    $result = $conn->query("SELECT id, user_email, content FROM forum_posts  LIMIT 3");
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
                             echo '<div class="flex justify-between items-center mt-2">';
@@ -241,7 +241,7 @@
             <div class="bg-green-200 p-8 rounded-xl space-y-4 shadow-xl relative mt-10">
                 <h1 class="text-green-900 text-2xl font-bold">Forum Moderation</h1>
                 <?php
-                $result = $conn->query("SELECT user_email, content, replies FROM forum_posts WHERE is_reported = 1 ORDER BY created_at DESC LIMIT 3");
+                $result = $conn->query("SELECT user_email, content, replies FROM forum_posts  ORDER BY created_at DESC LIMIT 3");
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
                         ?>
