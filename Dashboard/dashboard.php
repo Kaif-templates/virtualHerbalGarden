@@ -99,6 +99,14 @@
                         <div><h2>Community Forum</h2></div>
                     </div>
                 </a>
+                <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
+                    <a href="../admin/admin1.php">
+                        <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
+                            <div><i class="fa-solid fa-user-tie"></i></i></div>
+                            <div><h2>Admin Dashboard</h2></div>
+                        </div>
+                    </a>
+                <?php } ?>
             </div>
             <a href="../login/logout.php">
                 <div class="flex justify-center mt-auto">
