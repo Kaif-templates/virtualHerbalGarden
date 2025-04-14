@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script> <!-- Updated to standard Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" 
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -99,6 +99,14 @@
                         <div><h2>Community Forum</h2></div>
                     </div>
                 </a>
+                <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>
+                    <a href="../admin/admin1.php">
+                        <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pr-2 pt-2 pb-2">
+                            <div><i class="fa-solid fa-user-tie"></i></i></div>
+                            <div><h2>Admin Dashboard</h2></div>
+                        </div>
+                    </a>
+                <?php } ?>
             </div>
             <a href="../login/logout.php">
                 <div class="flex justify-center mt-auto">

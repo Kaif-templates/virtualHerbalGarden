@@ -79,7 +79,7 @@
                     <div><h2>User Dashboard</h2></div>
                 </div>
             </a>
-            <a href="./admin_users.php">
+            <a href="./users.php">
                 <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                     <div><i class="fa-solid fa-users"></i></div>
                     <div><h2>Manage Users</h2></div>
