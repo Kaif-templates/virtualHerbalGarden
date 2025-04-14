@@ -32,7 +32,7 @@
             AYUSH Herb
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
@@ -50,7 +50,7 @@
             </button>
         </div>
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <a href="../Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
@@ -67,7 +67,7 @@
             <h1 class="text-3xl font-bold">Ayush Herb</h1>
         </div>
         <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
-            <a href="../index.php">
+            <a href="../index.html">
                 <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                     <div><i class="fa-solid fa-house"></i></div>
                     <div><h2>Home</h2></div>
@@ -114,7 +114,7 @@
         <!-- Admin Cards -->
         <div class="mt-10">
             <!-- Manage Herbs Card -->
-            <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
+            <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md ">
                 <div class="text-green-900 text-4xl"><i class="fa-solid fa-leaf"></i></div>
                 <div class="text-green-900 text-xl font-bold"><h1>Manage Herbs</h1></div>
                 <div class="text-gray-600 text-lg"><p>Add new herb details.</p></div>
@@ -129,9 +129,14 @@
                     $medicinal_use = $_POST['medicinal_use'];
                     $cultivation = $_POST['cultivation'];
                     $image =$_POST['image'];
+                    $img1=$_POST['img1'];
+                    $img2=$_POST['img2'];
+                    $img3=$_POST['img3'];
+                    $frame_url= $_POST['frame_url'];
+                    $audio_url = $_POST['audio_url'];
 
-                    $stmt = $conn->prepare("INSERT INTO herbs (name, region, common_name, type, botanical_name, medicinal_use, cultivation, image,bio) VALUES (?, ?, ?, ?, ?, ?, ?,?,?)");
-                    $stmt->bind_param("sssssssss", $name, $region, $common_name, $type, $botanical_name, $medicinal_use, $cultivation,$image,$bio);
+                    $stmt = $conn->prepare("INSERT INTO herbs (name, region, common_name, type, botanical_name, medicinal_use, cultivation, image,bio,img1,img2,img3,frame_url,audio_url) VALUES (?, ?, ?, ?, ?, ?, ?,?,?,?,?,?,?,?)");
+                    $stmt->bind_param("ssssssssssssss", $name, $region, $common_name, $type, $botanical_name, $medicinal_use, $cultivation,$image,$bio,$img1,$img2,$img3,$frame_url,$audio_url);
                     if ($stmt->execute()) {
                         echo '<p class="text-green-600 mt-2">Herb added successfully!</p>';
                     } else {
@@ -149,7 +154,15 @@
                     <input type="text" name="botanical_name" placeholder="Botanical Name" class="w-full p-2 border rounded border-green-300">
                     <input type="text" name="medicinal_use" placeholder="Medicinal Use" class="w-full p-2 border rounded border-green-300">
                     <input type="text" name="cultivation" placeholder="Cultivation Method" class="w-full p-2 border rounded border-green-300">
-                    <input type="text" name="image" placeholder="Image Name" required class="w-full p-2 border rounded border-green-300">
+                    <div class="flex">
+                        <input type="text" name="image" placeholder="Image Name" required class="w-full p-2 border rounded border-green-300">
+                        <input type="text" name="img1" placeholder="Image 2" required class="w-full p-2 border rounded border-green-300">
+                        <input type="text" name="img2" placeholder="Image 3" required class="w-full p-2 border rounded border-green-300">
+                        <input type="text" name="img3" placeholder="Image 4" required class="w-full p-2 border rounded border-green-300">
+                    </div>
+                    <input type="text" name="frame_url" placeholder="3d URL" required class="w-full p-2 border rounded border-green-300">
+                    <input type="text" name="audio_url" placeholder="Audio Name" required class="w-full p-2 border rounded border-green-300">
+
                     <button type="submit" name="herb_submit" class="w-full p-2 bg-green-600 text-white rounded hover:bg-green-700">Add Herb</button>
                 </form>
             </div>

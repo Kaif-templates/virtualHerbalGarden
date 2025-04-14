@@ -5,7 +5,7 @@ session_start();
 // Redirect if already logged in
 if (isset($_SESSION['user_email'])) {
     if ($_SESSION['is_admin']) {
-        header("Location: ../Dashboard/admin1.php");
+        header("Location: ../admin/admin1.php");
     } else {
         header("Location: ../Dashboard/dashboard.php");
     }
@@ -28,7 +28,7 @@ if (isset($_SESSION['user_email'])) {
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
         <div class="text-4xl text-green-800 font-semibold font-mono">AyushHerb</div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
-            <a href="../index.php"><div class="hover:underline hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
             <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
@@ -45,7 +45,7 @@ if (isset($_SESSION['user_email'])) {
             </button>
         </div>
         <div class="hidden flex-col bg-white absolute top-14 left-0 w-full shadow-md sm:hidden" id="mobile-menu">
-            <a href="../index.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
+            <a href="../index.html"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div></a>
             <a href="../Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div></a>
@@ -81,7 +81,7 @@ if (isset($_SESSION['user_email'])) {
                         $_SESSION['is_admin'] = true;
                         $stmt->close();
                         $conn->close();
-                        header("Location: ../Dashboard/admin1.php");
+                        header("Location: ../admin/admin1.php");
                         exit();
                     } else {
                         echo '<p class="text-red-500 mt-4">Invalid admin email or password!</p>';
