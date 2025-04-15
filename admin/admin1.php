@@ -153,11 +153,13 @@
                 </a>
 
                 <!-- Manage Users Card (Display and Delete Users) -->
-                <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
-                    <div class="text-green-900 text-4xl"><i class="fa-solid fa-users"></i></div>
-                    <div class="text-green-900 text-xl font-bold"><h1>Manage Users</h1></div>
-                    <div class="text-gray-600 text-lg"><p>View or delete users.</p></div>
-                    <?php
+                <a href="./users.php">
+
+                    <div class="w-full h-[82vh] bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
+                        <div class="text-green-900 text-4xl"><i class="fa-solid fa-users"></i></div>
+                        <div class="text-green-900 text-xl font-bold"><h1>Manage Users</h1></div>
+                        <div class="text-gray-600 text-lg"><p>View or delete users.</p></div>
+                        <?php
                     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user'])) {
                         $user_id = $_POST['user_id'];
                         $stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
@@ -169,7 +171,7 @@
                         }
                         $stmt->close();
                     }
-
+                    
                     $result = $conn->query("SELECT id, email FROM users LIMIT 3");
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
@@ -186,6 +188,7 @@
                     }
                     ?>
                 </div>
+            </a>
 
                 <!-- View Reports Card (Static Data Fetch) -->
                 <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl hover:transition-transform">
