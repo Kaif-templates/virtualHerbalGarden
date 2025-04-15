@@ -28,7 +28,7 @@
             <a href="../login/login.php">
                 <div class="hover:underline hover:text-green-500">Login</div>
             </a>
-            <a href="#">
+            <a href="">
                 <div class="hover:underline text-green-500">Health</div>
             </a>
 
