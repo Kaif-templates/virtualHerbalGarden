@@ -236,86 +236,93 @@
             </div>
 
             <!-- Right Column: Text Content -->
-            <div class="w-full md:w-1/2 flex flex-col gap-3 overflow-y-auto pr-2 h-full text-gray-700">
+            <div class="w-full md:w-1/2 h-[95vh] flex flex-col gap-3 overflow-y-auto pr-2 text-gray-700">
                 <h2 id="plantName" class="text-2xl font-bold">Plant Name</h2>
                 <div id="plantBio" class="text-xl overflow-y-auto h-[75%] pr-1">
                     <!-- Dynamic content from DB -->
                 </div>
 
-                <label for="notes" class="text-gray-700 font-bold">Notes:</label>
+                <!-- <label for="notes" class="text-gray-700 font-bold">Notes:</label>
                 <textarea id="notes" rows="4" class="border rounded-md p-2 w-full h-24"
-                    placeholder="Write your notes here..."></textarea>
+                    placeholder="Write your notes here..."></textarea> -->
 
-                <div class="flex gap-3 mt-2">
+                <!-- <div class="flex gap-3 mt-2">
                     <button class="bg-blue-500 text-white px-4 py-2 rounded-md">Download</button>
                     
                     <button class="bg-gray-500 text-white px-4 py-2 rounded-md">Comment</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </div>
 
-
 <script>
 document.addEventListener("DOMContentLoaded", () => {
     console.log("JS Loaded");
+    const searchInput = document.querySelector('input[placeholder="Search for plants..."]');
+    const container = document.getElementById("herbTilesContainer");
+    let allHerbs = []; 
 
+    // Function to render tiles
+    function renderTiles(herbs) {
+        container.innerHTML = '';
+        herbs.forEach(herb => {
+            const imagePath = herb.image.replace(/^(\.\.\/)+/, './');
+            const herbTile = document.createElement("div");
+            herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-xl";
+            herbTile.innerHTML = `
+                <img src="${imagePath}" alt="${herb.name}" class="w-full h-60 object-cover rounded-t-md">
+                <h3 class="text-xl font-bold mt-2">${herb.name}</h3>
+                <p class="text-gray-600">${herb.region}</p>
+            `;
+
+            herbTile.addEventListener("click", () => {
+                const modal = document.getElementById("plantModal1");
+                modal.querySelector("h2").textContent = herb.name;
+                document.getElementById("modelView").src = herb.frame_url || "";
+                document.getElementById("mediaImg1").src = herb.img1 ? herb.img1.replace(/^(\.\.\/)+/, './') : "";
+                document.getElementById("mediaImg2").src = herb.img2 ? herb.img2.replace(/^(\.\.\/)+/, './') : "";
+                document.getElementById("mediaImg3").src = herb.img3 ? herb.img3.replace(/^(\.\.\/)+/, './') : "";
+                document.getElementById("audioPlayer").src = herb.audio_url ? herb.audio_url.replace(/^(\.\.\/)+/, './') : "";
+                document.getElementById("plantBio").innerHTML = `
+                    <p>${herb.bio}</p>
+                    <p><strong>Region:</strong> ${herb.region}</p>
+                    <p><strong>Common Names:</strong> ${herb.common_name}</p>
+                    <p><strong>Type:</strong> ${herb.type}</p>
+                    <p><strong>Botanical Name:</strong> ${herb.botanical_name}</p>
+                    <p><strong>Medicinal Uses:</strong> ${herb.medicinal_use}</p>
+                    <p><strong>Methods of Cultivation:</strong> ${herb.cultivation}</p>
+                `;
+                modal.classList.remove("hidden");
+            });
+
+            container.appendChild(herbTile);
+        });
+    }
+
+    // Fetch herbs data
     fetch("./api/fetch_herbs.php")
         .then(response => response.json())
         .then(data => {
             console.log("Herbs fetched:", data);
-            const container = document.getElementById("herbTilesContainer");
-
-            data.forEach(herb => {
-                const imagePath = herb.image.replace(/^(\.\.\/)+/, './');
-
-                const herbTile = document.createElement("div");
-                herbTile.className = "bg-white rounded-lg shadow-md p-4 cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-xl";
-                herbTile.innerHTML = `
-                    <img src="${imagePath}" alt="${herb.name}" class="w-full h-60 object-cover rounded-t-md">
-                    <h3 class="text-xl font-bold mt-2">${herb.name}</h3>
-                    <p class="text-gray-600">${herb.region}</p>
-                `;
-
-                herbTile.addEventListener("click", () => {
-                    const modal = document.getElementById("plantModal1");
-
-                    // Set text content
-                    modal.querySelector("h2").textContent = herb.name;
-
-                    // Set iframe (3D model view)
-                    document.getElementById("modelView").src = herb.frame_url || "";
-
-                    // Set images
-                    document.getElementById("mediaImg1").src = herb.img1 ? herb.img1.replace(/^(\.\.\/)+/, './') : "";
-                    document.getElementById("mediaImg2").src = herb.img2 ? herb.img2.replace(/^(\.\.\/)+/, './') : "";
-                    document.getElementById("mediaImg3").src = herb.img3 ? herb.img3.replace(/^(\.\.\/)+/, './') : "";
-
-                    // Set audio
-                    document.getElementById("audioPlayer").src = herb.audio_url ? herb.audio_url.replace(/^(\.\.\/)+/, './') : "";
-
-                    // Set detailed description
-                    document.getElementById("plantBio").innerHTML = `
-                        <p>${herb.bio}</p>
-                        <p><strong>Region:</strong> ${herb.region}</p>
-                        <p><strong>Common Names:</strong> ${herb.common_name}</p>
-                        <p><strong>Type:</strong> ${herb.type}</p>
-                        <p><strong>Botanical Name:</strong> ${herb.botanical_name}</p>
-                        <p><strong>Medicinal Uses:</strong> ${herb.medicinal_use}</p>
-                        <p><strong>Methods of Cultivation:</strong> ${herb.cultivation}</p>
-                    `;
-
-                    // Show modal
-                    modal.classList.remove("hidden");
-                });
-
-                container.appendChild(herbTile);
-            });
+            allHerbs = data; 
+            renderTiles(allHerbs); 
         })
         .catch(err => {
             console.error("Fetch Error:", err);
         });
+
+    // Search functionality
+    searchInput.addEventListener("input", (e) => {
+        const query = e.target.value.toLowerCase();
+        const filteredHerbs = allHerbs.filter(herb => 
+            herb.name.toLowerCase().includes(query) ||
+            herb.region.toLowerCase().includes(query) ||
+            herb.common_name.toLowerCase().includes(query) ||
+            herb.botanical_name.toLowerCase().includes(query)
+        );
+        renderTiles(filteredHerbs);
+    });
 });
 
 // Close Modal Function
@@ -324,10 +331,6 @@ function closeModal(modalId) {
 }
 
 </script>
-
-
-
-
     <script src="script.js"></script>
 </body>
 
