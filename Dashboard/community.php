@@ -124,7 +124,7 @@
                                 <span class="text-gray-600"><i class="fa-solid fa-thumbs-up"></i> <?php echo $row['upvotes']; ?></span>
                                 <span class="text-gray-600"><i class="fa-solid fa-thumbs-down"></i> <?php echo $row['downvotes']; ?></span>
                             </div>
-                            <a href="#" class="text-blue-500 hover:underline">View Replies (<?php echo $row['replies']; ?>)</a>
+                            <div>.</div>
                         </div>
                     </div>
                     <?php
