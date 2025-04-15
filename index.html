@@ -195,7 +195,7 @@
             </div>
 
             
-            <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold flex gap-1 justify-center">
+            <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold  gap-1 ">
                 © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by 
                 <a href="https://github.com/2784alok" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
                     Alok </a> , 
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("JS Loaded");
     const searchInput = document.querySelector('input[placeholder="Search for plants..."]');
     const container = document.getElementById("herbTilesContainer");
-    let allHerbs = []; 
+    let allHerbs = [];
 
     // Function to render tiles
     function renderTiles(herbs) {
@@ -285,13 +285,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("mediaImg3").src = herb.img3 ? herb.img3.replace(/^(\.\.\/)+/, './') : "";
                 document.getElementById("audioPlayer").src = herb.audio_url ? herb.audio_url.replace(/^(\.\.\/)+/, './') : "";
                 document.getElementById("plantBio").innerHTML = `
-                    <p>${herb.bio}</p>
-                    <p><strong>Region:</strong> ${herb.region}</p>
-                    <p><strong>Common Names:</strong> ${herb.common_name}</p>
-                    <p><strong>Type:</strong> ${herb.type}</p>
-                    <p><strong>Botanical Name:</strong> ${herb.botanical_name}</p>
-                    <p><strong>Medicinal Uses:</strong> ${herb.medicinal_use}</p>
-                    <p><strong>Methods of Cultivation:</strong> ${herb.cultivation}</p>
+                    <p>${herb.bio || 'No description available'}</p>
+                    <p><strong>Region:</strong> ${herb.region || 'N/A'}</p>
+                    <p><strong>Common Names:</strong> ${herb.common_name || 'N/A'}</p>
+                    <p><strong>Type:</strong> ${herb.type || 'N/A'}</p>
+                    <p><strong>Botanical Name:</strong> ${herb.botanical_name || 'N/A'}</p>
+                    <p><strong>Medicinal Uses:</strong> ${herb.medicinal_use || 'N/A'}</p>
+                    <p><strong>Methods of Cultivation:</strong> ${herb.cultivation || 'N/A'}</p>
                 `;
                 modal.classList.remove("hidden");
             });
@@ -305,23 +305,25 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.json())
         .then(data => {
             console.log("Herbs fetched:", data);
-            allHerbs = data; 
-            renderTiles(allHerbs); 
+            allHerbs = data;
+            renderTiles(allHerbs);
         })
         .catch(err => {
             console.error("Fetch Error:", err);
         });
 
-    // Search functionality
+    // Search functionality with scrolling
     searchInput.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
-        const filteredHerbs = allHerbs.filter(herb => 
+        const filteredHerbs = allHerbs.filter(herb =>
             herb.name.toLowerCase().includes(query) ||
             herb.region.toLowerCase().includes(query) ||
             herb.common_name.toLowerCase().includes(query) ||
             herb.botanical_name.toLowerCase().includes(query)
         );
         renderTiles(filteredHerbs);
+        // Scroll to herbTilesContainer on input
+        container.scrollIntoView({ behavior: "smooth" });
     });
 });
 
@@ -329,8 +331,11 @@ document.addEventListener("DOMContentLoaded", () => {
 function closeModal(modalId) {
     document.getElementById(modalId).classList.add("hidden");
 }
-
 </script>
+
+
+
+
     <script src="script.js"></script>
 </body>
 
