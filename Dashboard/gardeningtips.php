@@ -267,7 +267,7 @@
     </div>
 
     
-    <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold flex gap-1">
+    <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold  gap-1 ">
                 © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by 
                 <a href="https://github.com/2784alok" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
                     Alok </a> , 

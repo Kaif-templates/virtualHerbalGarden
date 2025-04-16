@@ -115,16 +115,25 @@
         <div class="text-green-900 text-4xl flex gap-6">
             <i class="fa-solid fa-users"></i>
             <p class="text-green-900 text-3xl font-bold">Manage Users</p>
-            
         </div>
         <div class="flex justify-between">
-
             <div class="text-gray-600 text-lg"><p>View users, admins, their posts, or delete them.</p></div>
-           
+        </div>
+
+        <!-- Search Form -->
+        <div class="mt-4">
+            <form method="GET" class="flex gap-4">
+                <input type="email" name="search_email" class="p-2 border rounded-xl border-green-300 placeholder:text-gray-400 w-full md:w-1/3" placeholder="Search by email..." value="<?php echo isset($_GET['search_email']) ? htmlspecialchars($_GET['search_email']) : ''; ?>">
+                <button type="submit" class="px-4 py-2 bg-green-800 text-white rounded-xl hover:bg-green-900 transition-colors duration-200">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i>Search
+                </button>
+                <?php if (isset($_GET['search_email']) && !empty($_GET['search_email'])) { ?>
+                    <a href="users.php" class="px-4 py-2 bg-gray-500 text-white rounded-xl hover:bg-gray-600 transition-colors duration-200">Clear Search</a>
+                <?php } ?>
+            </form>
         </div>
 
         <?php
-        
         // Handle delete post
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_post'])) {
             $post_id = $_POST['post_id'];
@@ -159,17 +168,31 @@
             $stmt2->close();
         }
 
+        // Determine if a search is active
+        $search_email = isset($_GET['search_email']) ? trim($_GET['search_email']) : '';
+        $is_search = !empty($search_email);
+
+        // Users Section
         echo "<h2 class='text-xl font-bold text-green-800 mt-6'>Users</h2>";
 
-        // Fetch users
-        $result = $conn->query("SELECT DISTINCT email FROM users");
+        if ($is_search) {
+            // Search for user by email in users and forum_posts
+            $stmt = $conn->prepare("SELECT DISTINCT email FROM users WHERE email = ? UNION SELECT DISTINCT user_email AS email FROM forum_posts WHERE user_email = ?");
+            $stmt->bind_param("ss", $search_email, $search_email);
+            $stmt->execute();
+            $result = $stmt->get_result();
+        } else {
+            // Fetch all users
+            $result = $conn->query("SELECT DISTINCT email FROM users");
+        }
+
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
                 $email = htmlspecialchars($row['email']);
                 echo '<div class="mt-4 bg-white p-4 rounded shadow">';
                 echo "<h3 class='text-green-800 font-semibold'>$email</h3>";
 
-                // User posts
+                // Fetch user posts
                 $stmt = $conn->prepare("SELECT id, content FROM forum_posts WHERE user_email = ?");
                 $stmt->bind_param("s", $row['email']);
                 $stmt->execute();
@@ -196,52 +219,50 @@
                 echo '</div>';
             }
         } else {
-            echo '<p class="text-gray-600 mt-2">No users found.</p>';
+            echo '<p class="text-gray-600 mt-2">' . ($is_search ? 'No users or posts found for this email.' : 'No users found.') . '</p>';
+        }
+        if ($is_search) {
+            $stmt->close();
         }
 
-        // ====================
-        // Admin Section
-        // ====================
-        echo "<h2 class='text-xl font-bold text-green-800 mt-10'>Admins</h2>";
+        // Admins Section (unchanged unless search includes admins)
+        if (!$is_search) {
+            echo "<h2 class='text-xl font-bold text-green-800 mt-10'>Admins</h2>";
+            $admin_result = $conn->query("SELECT DISTINCT email FROM admins");
+            if ($admin_result->num_rows > 0) {
+                while ($admin = $admin_result->fetch_assoc()) {
+                    $admin_email = htmlspecialchars($admin['email']);
+                    echo '<div class="mt-4 bg-white p-4 rounded shadow">';
+                    echo "<h3 class='text-green-800 font-semibold'>$admin_email (Admin)</h3>";
 
-        $admin_result = $conn->query("SELECT DISTINCT email FROM admins");
-        if ($admin_result->num_rows > 0) {
-            while ($admin = $admin_result->fetch_assoc()) {
-                $admin_email = htmlspecialchars($admin['email']);
-                echo '<div class="mt-4 bg-white p-4 rounded shadow">';
-                echo "<h3 class='text-green-800 font-semibold'>$admin_email (Admin)</h3>";
+                    // Admin's posts
+                    $stmt = $conn->prepare("SELECT id, content FROM forum_posts WHERE user_email = ?");
+                    $stmt->bind_param("s", $admin['email']);
+                    $stmt->execute();
+                    $admin_posts = $stmt->get_result();
 
-                // Admin's posts
-                $stmt = $conn->prepare("SELECT id, content FROM forum_posts WHERE user_email = ?");
-                $stmt->bind_param("s", $admin['email']);
-                $stmt->execute();
-                $admin_posts = $stmt->get_result();
-
-                if ($admin_posts->num_rows > 0) {
-                    while ($post = $admin_posts->fetch_assoc()) {
-                        echo '<div class="flex justify-between items-center border-t pt-2 mt-2">';
-                        echo '<span class="text-gray-700">' . htmlspecialchars($post['content']) . '</span>';
-                        echo '<form method="POST">';
-                        echo '<input type="hidden" name="post_id" value="' . $post['id'] . '">';
-                        echo '<button type="submit" name="delete_post" class="text-red-500 hover:text-red-700 ml-4"><i class="fa-solid fa-trash"></i></button>';
-                        echo '</form>';
-                        echo '</div>';
+                    if ($admin_posts->num_rows > 0) {
+                        while ($post = $admin_posts->fetch_assoc()) {
+                            echo '<div class="flex justify-between items-center border-t pt-2 mt-2">';
+                            echo '<span class="text-gray-700">' . htmlspecialchars($post['content']) . '</span>';
+                            echo '<form method="POST">';
+                            echo '<input type="hidden" name="post_id" value="' . $post['id'] . '">';
+                            echo '<button type="submit" name="delete_post" class="text-red-500 hover:text-red-700 ml-4"><i class="fa-solid fa-trash"></i></button>';
+                            echo '</form>';
+                            echo '</div>';
+                        }
+                    } else {
+                        echo '<p class="text-gray-500 mt-2">No posts found for this admin.</p>';
                     }
-                } else {
-                    echo '<p class="text-gray-500 mt-2">No posts found for this admin.</p>';
-                }
 
-                echo '</div>';
+                    echo '</div>';
+                }
+            } else {
+                echo '<p class="text-gray-600 mt-2">No admins found.</p>';
             }
-        } else {
-            echo '<p class="text-gray-600 mt-2">No admins found.</p>';
         }
         ?>
     </div>
 </div>
-
-    </div>
-
-    <?php $conn->close(); ?>
 </body>
 </html>
