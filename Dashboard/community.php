@@ -46,12 +46,14 @@
     <!-- Navigation Bar -->
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow">
         <div class="text-4xl text-green-800 font-semibold font-mono">
-            AYUSH Herb
+            <a href="../index.html">
+               Ayush Herb
+            </a>
         </div>
         <div class=" space-x-6 text-green-900 text-lg hidden md:flex">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="./community.php"><div class="hover:underline text-green-500">Community</div></a>
             <a href="./dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <?php if (isset($_SESSION['is_admin']) && $_SESSION['is_admin']) { ?>

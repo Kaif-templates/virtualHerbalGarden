@@ -22,7 +22,7 @@ if (isset($_SESSION['user_email'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login - AYUSH Herb</title>
+    <title>Login - Ayush Herb</title>
 </head>
 <body class="font-sans">
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">

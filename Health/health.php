@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
+    <title>Ayush Herb - Health</title>
 </head>
 
 <body>
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
 
         <div class="text-4xl text-green-800 font-semibold font-mono ">
-            AYUSH Herb
+            <a href="../index.html">
+               Ayush Herb
+            </a>
         </div>
 
         <!-- Desktop Menu -->
@@ -28,7 +30,7 @@
             <a href="../login/login.php">
                 <div class="hover:underline hover:text-green-500">Login</div>
             </a>
-            <a href="#">
+            <a href="">
                 <div class="hover:underline text-green-500">Health</div>
             </a>
 
@@ -87,66 +89,79 @@
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/skincare.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Skin Care</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/Skin_care" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/skincare.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Skin Care</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+
+                </a>
             </div>
 
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/haircare.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Hair Care</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/Hair_care" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/haircare.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Hair Care</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+                </a>
             </div>
 
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/diseases.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Diseases</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/Medicinal_plants" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/diseases.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Diseases</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+                </a>
             </div>
 
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/nutrition.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Nutrition</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/Plant_nutrition" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/nutrition.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Nutrition</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+                </a>
             </div>
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/fitness.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Fitness</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/List_of_plants_used_in_herbalism" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/fitness.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Fitness</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+                </a>
             </div>
 
 
             <div
                 class="bg-white shadow-lg rounded-lg overflow-hidden transform transition hover:scale-105 cursor-pointer duration-300 ease-in-out">
-                <img class="w-full h-48 object-cover" src="../assets/mentalhealth.png" alt="Skin Care">
-                <div class="p-4">
-                    <h3 class="text-xl pb-2 font-semibold">Mental Health</h3>
-                    <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
-                        properties.</p>
-                </div>
+                <a href="https://en.wikipedia.org/wiki/List_of_psychoactive_plants" target="_blank">
+                    <img class="w-full h-48 object-cover" src="../assets/mentalhealth.png" alt="Skin Care">
+                    <div class="p-4">
+                        <h3 class="text-xl pb-2 font-semibold">Mental Health</h3>
+                        <p class="text-sm text-gray-500">Explore plants and herbs known for their healing and wellness
+                            properties.</p>
+                    </div>
+                </a>
             </div>
 
 
@@ -181,9 +196,12 @@
                 <h3 class="text-2xl font-bold text-green-700 mb-4">Take a Step Towards Better Health</h3>
                 <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">Embrace natural living and enhance your
                     well-being by integrating these herbs and practices into your daily life. Join us in a journey
-                    towards a healthier, balanced lifestyle.</p><button
-                    class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">Get
-                    Started Now</button>
+                    towards a healthier, balanced lifestyle.</p>
+                    <a href="../index.html#herbTilesContainer" >
+                        <button class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
+                            Get Started Now
+                        </button>
+                    </a>
             </div>
         </div>
     </main>
