@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>AYUSH Herb Quiz</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
   <script>
     function showCategory(category) {
       document.querySelectorAll(".quiz-section").forEach(s => s.classList.add("hidden"));
@@ -34,6 +37,7 @@
 </head>
 <body class="bg-green-50 text-green-900 min-h-screen px-4 py-10">
   <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-lg border-2 border-green-300 p-8">
+    <a href="../index.html" class="text-green-700"><i class="fa-solid fa-house"></i></a>
     <h1 class="text-3xl font-bold text-center text-green-700 mb-6">🌿 AYUSH Herb Quiz</h1>
 
     <!-- Category Selection -->
