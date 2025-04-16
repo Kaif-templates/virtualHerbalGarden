@@ -28,7 +28,9 @@
 
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
         <div class="text-4xl text-green-800 font-semibold font-mono">
-           AYUSH Herb
+            <a href="../index.html">
+               Ayush Herb
+            </a>
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>

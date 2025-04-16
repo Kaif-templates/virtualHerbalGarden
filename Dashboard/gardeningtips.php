@@ -13,7 +13,9 @@
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow ">
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
-           AYUSH Herb
+            <a href="../index.html">
+               Ayush Herb
+            </a>
         </div>
     
         <!-- Desktop Menu -->

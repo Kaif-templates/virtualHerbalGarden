@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Ayush Herb</title>
+    <title>Ayush Herb - Health</title>
 </head>
 
 <body>
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
 
         <div class="text-4xl text-green-800 font-semibold font-mono ">
-            AYUSH Herb
+            <a href="../index.html">
+               Ayush Herb
+            </a>
         </div>
 
         <!-- Desktop Menu -->
@@ -195,8 +197,10 @@
                 <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">Embrace natural living and enhance your
                     well-being by integrating these herbs and practices into your daily life. Join us in a journey
                     towards a healthier, balanced lifestyle.</p>
-                    <a href="../index.html#herbTilesContainer" class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
-                        Get Started Now
+                    <a href="../index.html#herbTilesContainer" >
+                        <button class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
+                            Get Started Now
+                        </button>
                     </a>
             </div>
         </div>
