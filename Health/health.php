@@ -194,9 +194,10 @@
                 <h3 class="text-2xl font-bold text-green-700 mb-4">Take a Step Towards Better Health</h3>
                 <p class="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">Embrace natural living and enhance your
                     well-being by integrating these herbs and practices into your daily life. Join us in a journey
-                    towards a healthier, balanced lifestyle.</p><button
-                    class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">Get
-                    Started Now</button>
+                    towards a healthier, balanced lifestyle.</p>
+                    <a href="../index.html#herbTilesContainer" class="py-3 px-6 bg-green-600 text-white font-semibold rounded-lg shadow-md hover:bg-green-700 transition-transform transform hover:scale-105">
+                        Get Started Now
+                    </a>
             </div>
         </div>
     </main>
