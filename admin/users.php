@@ -225,7 +225,7 @@
             $stmt->close();
         }
 
-        // Admins Section (unchanged unless search includes admins)
+        // Admins Section 
         if (!$is_search) {
             echo "<h2 class='text-xl font-bold text-green-800 mt-10'>Admins</h2>";
             $admin_result = $conn->query("SELECT DISTINCT email FROM admins");
