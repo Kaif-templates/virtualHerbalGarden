@@ -28,7 +28,7 @@
          <div class="hover:underline hover:text-green-500">Login</div></a>
 
             <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
-            <a href="./community.html">
+            <a href="./community.php">
             <div class="hover:underline hover:text-green-500">Community</div>
             </a>
             <a href="./dashboard.php">
@@ -58,7 +58,7 @@
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
             </a>
             <a href="../Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
-            <a href="./community.html">
+            <a href="./community.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
             </a>
             <a href="./dashbord.php">
@@ -76,7 +76,7 @@
                 <li>Watering schedules for different plant types</li>
                 <li>Pest control without chemicals</li>
             </ul></div>
-            <div class="bg-green-900 w-fit py-2 px-3 rounded-md"><a href="https://en.wikipedia.org/wiki/Gardening"><button class="text-white w-full">Learn More</button></a></div>
+            <div class="bg-green-900 w-fit py-2 px-3 rounded-md"><a href="https://en.wikipedia.org/wiki/Gardening"><button class="text-white w-full cursor-pointer">Learn More</button></a></div>
         </div>
         <div class="flex flex-1 m-2">
                 <img src="https://ideogram.ai/assets/progressive-image/balanced/response/NJw1wxWVT3WlWdd8iyDJtw" class="rounded-xl">
@@ -224,7 +224,7 @@
 
     
 <!-- Footer Section -->
-<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2 border mt-6">
+<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2  mt-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
         
         <div class="flex justify-center lg:justify-start">
@@ -242,7 +242,7 @@
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">2784alok@gmail.com</p>
+                <p class="text-lg text-green-800">kaag@gmail.com</p>
             </div>
         </div>
 
