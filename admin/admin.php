@@ -108,7 +108,7 @@
     </div>
 
     <!-- Main Content Area (Responsive Fix Applied) -->
-    <div class="bg-green-50 flex-1 p-10 w-full md:ml-64">
+    <div class=" flex-1 p-10 w-full md:ml-64">
         <div class="text-3xl">
             <h1 class="text-green-900 font-bold">Admin Dashboard, <?php echo htmlspecialchars($user_email); ?></h1>
         </div>
