@@ -8,7 +8,6 @@
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dashboard - AYUSH Herb</title>
-    <script src="../script.js"></script>
 </head>
 <body>
     <?php
@@ -108,7 +107,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="bg-green-50 flex-1 mx-auto p-7 w-full md:ml-64">
+        <div class=" flex-1 mx-auto p-7 w-full md:ml-64">
             <div class="text-3xl">
                 <h1 class="text-green-900 font-bold">Welcome Back, <?php echo htmlspecialchars($user_email); ?></h1>
             </div>
