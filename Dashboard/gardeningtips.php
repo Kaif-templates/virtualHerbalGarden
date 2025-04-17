@@ -14,7 +14,7 @@
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
             <a href="../index.html">
-               Ayush Herb
+               AYUSH Herb
             </a>
         </div>
     
@@ -233,7 +233,7 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
         
         <div class="flex justify-center lg:justify-start">
-            <h1 class="text-6xl font-bold font-sans">Ayush Herb</h1>
+            <h1 class="text-6xl font-bold font-sans">AYUSH Herb</h1>
         </div>
 
         
@@ -247,7 +247,7 @@
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">kaag@gmail.com</p>
+                <p class="text-lg text-green-800">ayushherb@gmail.com</p>
             </div>
         </div>
 
