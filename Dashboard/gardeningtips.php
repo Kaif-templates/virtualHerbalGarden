@@ -109,7 +109,7 @@
         </div>
         <div class="flex flex-col w-auto h-auto lg:h-50 lg:m-10 shadow-xl rounded-xl lg:flex-row">
             <div class="m-2">
-                <img src="https://ideogram.ai/assets/image/lossless/response/YvtKd_jpSG24V4a99hJdcQ" class="w-full h-full object-contain rounded-xl">
+                <img src="../assets/soilprep.webp" class="w-full h-full object-contain rounded-xl">
             </div>
             <div class="flex-col space-y-2 m-5">
                 <div class="text-2xl text-green-900 font-bold">
