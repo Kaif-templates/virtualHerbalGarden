@@ -7,4 +7,4 @@ function toggleDetails(element) {
                 details.classList.add('hidden');
                 element.innerHTML = "<h1>Show Details</h1>";
             }
-        }
+        };

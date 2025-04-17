@@ -78,10 +78,15 @@
             </ul></div>
             <div class="bg-green-900 w-fit py-2 px-3 rounded-md"><a href="https://en.wikipedia.org/wiki/Gardening"><button class="text-white w-full cursor-pointer">Learn More</button></a></div>
         </div>
-        <div class="flex flex-1 m-2">
-                <img src="https://ideogram.ai/assets/progressive-image/balanced/response/NJw1wxWVT3WlWdd8iyDJtw" class="rounded-xl">
+        <div class="flex flex-1 m-2 rounded relative overflow-hidden">
+            <img src="https://ideogram.ai/assets/progressive-image/balanced/response/NJw1wxWVT3WlWdd8iyDJtw" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 1">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/gardening-1521662873.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 2">
+            <img src="https://t3.ftcdn.net/jpg/01/38/06/76/360_F_138067641_nhB3jLhnIc1PIdjmWziWPN3bMy07unqX.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 3">
+            <img src="https://cdn.britannica.com/42/91642-050-332E5C66/Keukenhof-Gardens-Lisse-Netherlands.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 4">
+            <img src="https://publichealth.tulane.edu/wp-content/uploads/sites/3/2024/04/benefits-of-community-gardens.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 5">
         </div>
     </div>
+    <!-- body -->
     <div class="sm:pt-5 lg:pt-0">
         <div class="flex flex-col w-auto h-auto lg:h-50 lg:m-10 shadow-xl rounded-xl lg:flex-row">
             <div class="m-2">
@@ -281,6 +286,6 @@
                     Gaurav </a>
             </h3>
 </footer>
-       
+<script src="slider.js"></script>   
 </body>
 </html>
