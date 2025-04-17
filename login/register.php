@@ -52,7 +52,7 @@
                 $password = $_POST['password'];
                 $confirm_password = $_POST['confirm_password'];
 
-                // Validation
+               
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     echo '<p class="text-red-500 mt-4">Invalid email format!</p>';
                 } elseif ($password !== $confirm_password) {
@@ -83,7 +83,7 @@
 
                         if ($stmt->execute()) {
                             echo '<p class="text-green-500 mt-4">Registration successful! Redirecting to login...</p>';
-                            header("Refresh: 2; url=./login.php"); // Redirect after 2 seconds
+                            header("Refresh: 2; url=./login.php");
                             exit();
                         } else {
                             echo '<p class="text-red-500 mt-4">Registration failed! Please try again.</p>';

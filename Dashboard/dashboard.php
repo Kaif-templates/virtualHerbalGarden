@@ -158,6 +158,8 @@
                     <a href="community.php">View All Discussions</a>
                 </div>
             </div>
+
+            
         </div>
     </div>
 

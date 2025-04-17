@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 // Redirect if already logged in
@@ -60,7 +61,7 @@ if (isset($_SESSION['user_email'])) {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $email = trim($_POST['email']);
                 $password = trim($_POST['password']);
-                $is_admin_login = isset($_POST['admin_login']);
+                $is_admin_login = isset($_POST['admin_login']); // Check if "Login as Admin" button was clicked
 
                 $conn = new mysqli("localhost", "root", "", "ayush_herb");
                 if ($conn->connect_error) {
@@ -145,4 +146,5 @@ if (isset($_SESSION['user_email'])) {
 </html>
 
 <?php
+ob_end_flush(); // Flush output buffer
 ?>
