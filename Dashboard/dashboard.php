@@ -8,6 +8,7 @@
           integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" 
           crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Dashboard - AYUSH Herb</title>
+    <script src="../script.js"></script>
 </head>
 <body>
     <?php
