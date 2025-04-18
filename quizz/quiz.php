@@ -65,6 +65,7 @@
 
       $correct = [];
 
+
       $qNo = 1;
       foreach ($questions as $q => $opts) {
         echo "<div><p class='font-medium'>$qNo. $q</p>";
