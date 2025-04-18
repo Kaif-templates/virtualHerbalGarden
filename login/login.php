@@ -1,5 +1,5 @@
 <?php
-ob_start(); // Start output buffering to prevent header issues
+
 session_start();
 
 // Redirect if already logged in
@@ -22,11 +22,11 @@ if (isset($_SESSION['user_email'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Login - Ayush Herb</title>
+    <title>Login - AYUSH Herb</title>
 </head>
 <body class="font-sans">
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
-        <div class="text-4xl text-green-800 font-semibold font-mono">AyushHerb</div>
+        <div class="text-4xl text-green-800 font-semibold font-mono">AYUSH Herb</div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="./login.php"><div class="hover:underline hover:text-green-500">Login</div></a>

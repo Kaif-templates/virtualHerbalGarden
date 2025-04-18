@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Register - Ayush Herb</title>
+    <title>Register - AYUSH Herb</title>
 </head>
 <body class="font-sans">
     <!-- Navigation Bar -->
     <nav class="flex justify-between p-4 shadow fixed w-full bg-white top-0 z-50">
         <div class="text-4xl text-green-800 font-semibold font-mono">
-            AyushHerb
+            AYUSH Herb
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
@@ -52,7 +52,7 @@
                 $password = $_POST['password'];
                 $confirm_password = $_POST['confirm_password'];
 
-                // Validation
+               
                 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                     echo '<p class="text-red-500 mt-4">Invalid email format!</p>';
                 } elseif ($password !== $confirm_password) {
@@ -83,7 +83,7 @@
 
                         if ($stmt->execute()) {
                             echo '<p class="text-green-500 mt-4">Registration successful! Redirecting to login...</p>';
-                            header("Refresh: 2; url=./login.php"); // Redirect after 2 seconds
+                            header("Refresh: 2; url=./login.php");
                             exit();
                         } else {
                             echo '<p class="text-red-500 mt-4">Registration failed! Please try again.</p>';

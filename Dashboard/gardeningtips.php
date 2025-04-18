@@ -14,7 +14,7 @@
         
         <div class="text-4xl text-green-800 font-semibold font-mono ">
             <a href="../index.html">
-               Ayush Herb
+               AYUSH Herb
             </a>
         </div>
     
@@ -28,7 +28,7 @@
          <div class="hover:underline hover:text-green-500">Login</div></a>
 
             <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
-            <a href="./community.html">
+            <a href="./community.php">
             <div class="hover:underline hover:text-green-500">Community</div>
             </a>
             <a href="./dashboard.php">
@@ -58,7 +58,7 @@
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Login</div>
             </a>
             <a href="../Health/health.php"><div class="p-4 hover:bg-gray-100 hover:text-green-500">Health</div></a>
-            <a href="./community.html">
+            <a href="./community.php">
             <div class="p-4 hover:bg-gray-100 hover:text-green-500">Community</div>
             </a>
             <a href="./dashbord.php">
@@ -76,12 +76,17 @@
                 <li>Watering schedules for different plant types</li>
                 <li>Pest control without chemicals</li>
             </ul></div>
-            <div class="bg-green-900 w-fit py-2 px-3 rounded-md"><a href="https://en.wikipedia.org/wiki/Gardening"><button class="text-white w-full">Learn More</button></a></div>
+            <div class="bg-green-900 w-fit py-2 px-3 rounded-md"><a href="https://en.wikipedia.org/wiki/Gardening"><button class="text-white w-full cursor-pointer">Learn More</button></a></div>
         </div>
-        <div class="flex flex-1 m-2">
-                <img src="https://ideogram.ai/assets/progressive-image/balanced/response/NJw1wxWVT3WlWdd8iyDJtw" class="rounded-xl">
+        <div class="flex flex-1 m-2 rounded relative overflow-hidden">
+            <img src="https://ideogram.ai/assets/progressive-image/balanced/response/NJw1wxWVT3WlWdd8iyDJtw" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 1">
+            <img src="https://hips.hearstapps.com/hmg-prod/images/gardening-1521662873.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 2">
+            <img src="https://t3.ftcdn.net/jpg/01/38/06/76/360_F_138067641_nhB3jLhnIc1PIdjmWziWPN3bMy07unqX.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 3">
+            <img src="https://cdn.britannica.com/42/91642-050-332E5C66/Keukenhof-Gardens-Lisse-Netherlands.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 4">
+            <img src="https://publichealth.tulane.edu/wp-content/uploads/sites/3/2024/04/benefits-of-community-gardens.jpg" class="w-full h-full object-cover rounded-xl absolute transition-all slides duration-1000" alt="Image 5">
         </div>
     </div>
+    <!-- body -->
     <div class="sm:pt-5 lg:pt-0">
         <div class="flex flex-col w-auto h-auto lg:h-50 lg:m-10 shadow-xl rounded-xl lg:flex-row">
             <div class="m-2">
@@ -104,7 +109,7 @@
         </div>
         <div class="flex flex-col w-auto h-auto lg:h-50 lg:m-10 shadow-xl rounded-xl lg:flex-row">
             <div class="m-2">
-                <img src="https://ideogram.ai/assets/image/lossless/response/YvtKd_jpSG24V4a99hJdcQ" class="w-full h-full object-contain rounded-xl">
+                <img src="../assets/soilprep.webp" class="w-full h-full object-contain rounded-xl">
             </div>
             <div class="flex-col space-y-2 m-5">
                 <div class="text-2xl text-green-900 font-bold">
@@ -224,11 +229,11 @@
 
     
 <!-- Footer Section -->
-<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2 border mt-6">
+<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2  mt-6">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
         
         <div class="flex justify-center lg:justify-start">
-            <h1 class="text-6xl font-bold font-sans">Ayush Herb</h1>
+            <h1 class="text-6xl font-bold font-sans">AYUSH Herb</h1>
         </div>
 
         
@@ -242,7 +247,7 @@
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">2784alok@gmail.com</p>
+                <p class="text-lg text-green-800">ayushherb@gmail.com</p>
             </div>
         </div>
 
@@ -281,6 +286,6 @@
                     Gaurav </a>
             </h3>
 </footer>
-       
+<script src="slider.js"></script>   
 </body>
 </html>

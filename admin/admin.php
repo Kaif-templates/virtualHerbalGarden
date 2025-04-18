@@ -30,13 +30,13 @@
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
         <div class="text-4xl text-green-800 font-semibold font-mono">
             <a href="../index.html">
-               Ayush Herb
+               AYUSH Herb
            </a>
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
             <a href="../index.html"><div class="hover:underline hover:text-green-500">Home</div></a>
             <a href="../login/login.php"><div class="hover:underline hover:text-green-500">Login</div></a>
-            <a href="../Health/health.html"><div class="hover:underline hover:text-green-500">Health</div></a>
+            <a href="../Health/health.php"><div class="hover:underline hover:text-green-500">Health</div></a>
             <a href="../Dashboard/community.php"><div class="hover:underline hover:text-green-500">Community</div></a>
             <a href="../Dashboard/dashboard.php"><div class="hover:underline hover:text-green-500">Dashboard</div></a>
             <a href="./admin.php"><div class="hover:underline hover:text-green-500">Admin</div></a>
@@ -66,7 +66,7 @@
     <!-- Sidebar -->
     <div class="bg-green-900 text-white flex flex-col w-64 p-5 h-screen hidden md:flex fixed">
         <div>
-            <h1 class="text-3xl font-bold">Ayush Herb</h1>
+            <h1 class="text-3xl font-bold">AYUSH Herb</h1>
         </div>
         <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
             <a href="../index.html">
@@ -108,7 +108,7 @@
     </div>
 
     <!-- Main Content Area (Responsive Fix Applied) -->
-    <div class="bg-green-50 flex-1 p-10 w-full md:ml-64">
+    <div class=" flex-1 p-10 w-full md:ml-64">
         <div class="text-3xl">
             <h1 class="text-green-900 font-bold">Admin Dashboard, <?php echo htmlspecialchars($user_email); ?></h1>
         </div>

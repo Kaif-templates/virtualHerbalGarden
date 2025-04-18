@@ -29,7 +29,7 @@
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
         <div class="text-4xl text-green-800 font-semibold font-mono">
             <a href="../index.html">
-               Ayush Herb
+               AYUSH Herb
             </a>
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
@@ -68,7 +68,7 @@
         <!-- Sidebar -->
         <div class="bg-green-900 text-white flex flex-col w-64 p-5 h-screen hidden md:flex fixed">
             <div>
-                <h1 class="text-3xl font-bold">Ayush Herb</h1>
+                <h1 class="text-3xl font-bold">AYUSH Herb</h1>
             </div>
             <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
                 <a href="../index.html">
@@ -77,18 +77,8 @@
                         <div><h2>Home</h2></div>
                     </div>
                 </a>
-                <a href="bookmark.html">
-                    <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
-                        <div><i class="fa-solid fa-leaf"></i></div>
-                        <div><h2>My Herb</h2></div>
-                    </div>
-                </a>
-                <a href="../index.html">
-                    <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
-                        <div><i class="fa-solid fa-magnifying-glass"></i></div>
-                        <div><h2>Explore Herbs</h2></div>
-                    </div>
-                </a>
+
+                
                 <a href="gardeningtips.php">
                     <div class="flex gap-4 hover:bg-green-600 hover:rounded-md pl-2 text-lg font-semibold pt-2 pb-2">
                         <div><i class="fa-solid fa-seedling"></i></div>
@@ -118,37 +108,31 @@
         </div>
 
         <!-- Main Content -->
-        <div class="bg-green-50 flex-1 mx-auto p-7 w-full md:ml-64">
+        <div class=" flex-1 mx-auto p-7 w-full md:ml-64">
             <div class="text-3xl">
                 <h1 class="text-green-900 font-bold">Welcome Back, <?php echo htmlspecialchars($user_email); ?></h1>
             </div>
-            <div class="grid grid-rows lg:grid-cols-4 gap-5 mt-10">
-                <a href="bookmark.html">
-                    <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
-                        <div class="text-green-900 text-4xl"><i class="fa-solid fa-leaf"></i></div>
-                        <div class="text-green-900 text-xl font-bold"><h1>View My Herbs</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Check out your saved herbs and their details.</p></div>
-                    </div>
-                </a>
+            <div class="grid grid-rows lg:grid-cols-3 gap-5 mt-10">
+                
                 <a href="../index.html">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-magnifying-glass"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Explore New Herbs</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Discover new herbs and their benefits.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Discover new herbs and their<br> benefits.</p></div>
                     </div>
                 </a>
                 <a href="gardeningtips.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-seedling"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Gardening Tips</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Learn tips and tricks for herb gardening.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Learn tips and tricks for herb<br> gardening.</p></div>
                     </div>
                 </a>
                 <a href="community.php">
                     <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md hover:scale-105 hover:shadow-xl">
                         <div class="text-green-900 text-4xl"><i class="fa-solid fa-comments"></i></div>
                         <div class="text-green-900 text-xl font-bold"><h1>Community Forum</h1></div>
-                        <div class="text-gray-600 text-lg"><p>Join discussions with fellow herb enthusiasts.</p></div>
+                        <div class="text-gray-600 text-lg"><p>Join discussions with fellow herb <br>enthusiasts.</p></div>
                     </div>
                 </a>
             </div>
@@ -163,7 +147,7 @@
                         ?>
                         <div class="bg-white p-4 rounded-xl">
                             <h1 class="text-gray-600 text-xl font-bold"><?php echo htmlspecialchars($row['content']); ?></h1>
-                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?> - <?php echo $row['replies']; ?> replies</p>
+                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?></p>
                         </div>
                         <?php
                     }
@@ -176,11 +160,7 @@
                 </div>
             </div>
 
-            <!-- Latest News Section (Unchanged) -->
-            <!-- <div class="bg-green-200 mt-10 p-8 rounded-xl space-y-4 shadow-xl">
-                <h1 class="text-2xl text-green-900 font-bold">Latest News</h1>
-                <p class="text-red-400 font-semibold">We will update soon. Stay Alert</p>
-            </div> -->
+            
         </div>
     </div>
 

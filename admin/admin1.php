@@ -30,7 +30,7 @@
     <nav class="flex justify-between p-4 shadow relative w-full bg-white top-0 z-50 flex-grow md:hidden">
         <div class="text-4xl text-green-800 font-semibold font-mono">
             <a href="../index.html">
-               Ayush Herb
+               AYUSH Herb
             </a>
         </div>
         <div class="hidden sm:flex space-x-6 text-green-900 text-lg">
@@ -66,7 +66,7 @@
         <!-- Sidebar -->
         <div class="bg-green-900 text-white flex flex-col w-64 p-5 h-screen hidden md:flex fixed">
             <div>
-                <h1 class="text-3xl font-bold">Ayush Herb</h1>
+                <h1 class="text-3xl font-bold">AYUSH Herb</h1>
             </div>
             <div class="space-y-8 text-[21px] flex flex-col mt-10 flex-grow">
                 <a href="../index.html">
@@ -108,7 +108,7 @@
         </div>
 
         <!-- Main Content Area -->
-        <div class="bg-green-50 flex-1 mx-auto p-7 w-full md:ml-64">
+        <div class=" flex-1 mx-auto p-7 w-full md:ml-64">
             <div class="text-3xl">
                 <h1 class="text-green-900 font-bold">Admin Dashboard, <?php echo htmlspecialchars($user_email); ?></h1>
             </div>
@@ -252,7 +252,7 @@
                         ?>
                         <div class="bg-white p-4 rounded-xl">
                             <h1 class="text-gray-600 text-xl font-bold">Reported Post: <?php echo htmlspecialchars($row['content']); ?></h1>
-                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?> - <?php echo $row['replies']; ?> replies</p>
+                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?></p>
                         </div>
                         <?php
                     }
@@ -261,7 +261,7 @@
                 }
                 ?>
                 <div class="absolute text-green-800 hover:text-green-900 right-10 font-semibold bottom-1">
-                    <a href="./community.php">View All Reports</a>
+                    <a href="../Dashboard/community.php">View All Reports</a>
                 </div>
             </div>
         </div>
