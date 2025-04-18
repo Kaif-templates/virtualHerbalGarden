@@ -261,7 +261,7 @@
                 }
                 ?>
                 <div class="absolute text-green-800 hover:text-green-900 right-10 font-semibold bottom-1">
-                    <a href="./community.php">View All Reports</a>
+                    <a href="../Dashboard/community.php">View All Reports</a>
                 </div>
             </div>
         </div>
