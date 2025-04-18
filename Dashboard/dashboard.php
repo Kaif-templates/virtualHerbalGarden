@@ -147,7 +147,7 @@
                         ?>
                         <div class="bg-white p-4 rounded-xl">
                             <h1 class="text-gray-600 text-xl font-bold"><?php echo htmlspecialchars($row['content']); ?></h1>
-                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?> - <?php echo $row['replies']; ?> replies</p>
+                            <p class="text-gray-500 text-lg">Started by <?php echo htmlspecialchars($row['user_email']); ?></p>
                         </div>
                         <?php
                     }
