@@ -146,5 +146,4 @@ if (isset($_SESSION['user_email'])) {
 </html>
 
 <?php
-ob_end_flush(); // Flush output buffer
 ?>
