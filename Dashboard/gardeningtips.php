@@ -229,52 +229,55 @@
 
     
 <!-- Footer Section -->
-<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2  mt-6">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
-        
-        <div class="flex justify-center lg:justify-start">
-            <h1 class="text-6xl font-bold font-sans">AYUSH Herb</h1>
-        </div>
+<footer class=" text-green-800 py-12 px-6 md:px-10 lg:px-20 shadow-xl border-t-2 border mt-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-center">
+                
+                <div class="flex justify-center lg:justify-start">
+                    <h1 class="text-6xl font-bold font-sans">AYUSH Herb</h1>
+                </div>
 
         
         <div class="text-center lg:text-left">
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-location-dot text-green-800 text-2xl mr-4"></i>
                 <p class="text-lg text-green-800">
-                    <span class="block">Lovely Professional University,</span>
-                    Jalandhar, 144411 (Punjab)
+                    <a href="https://www.google.co.in/maps/search/lovely+professional+university+front+gate/@31.2549195,75.6940084,15z?entry=ttu&g_ep=EgoyMDI1MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                        <span class="block">Lovely Professional University,</span>
+                        Jalandhar, 144411 (Punjab)
+
+                    </a>
                 </p>
             </div>
             <div class="flex items-center justify-center lg:justify-start mb-4">
                 <i class="fa-solid fa-envelope text-green-800 text-2xl mr-4"></i>
-                <p class="text-lg text-green-800">ayushherb@gmail.com</p>
+                <a href="mailto:ayushherb@gmail.com" class="text-lg text-green-800">ayushherb@gmail.com</a>
             </div>
         </div>
 
-        
-        <div class="text-center lg:text-left">
-            <span class="text-xl font-bold text-green-800">Technology Stack Used:</span>
-            <div class="flex justify-center lg:justify-start mt-6 space-x-6">
-                <a href="#" class="text-4xl hover:text-green-600">
-                    <i class="fab fa-node-js text-4xl text-green-500"></i>
-                </a>
-                <a href="#" class="text-4xl hover:text-green-600">
-                    <i class="fas fa-database text-4xl text-yellow-500"></i>
-                </a>
                 
-                <a href="#" class="text-4xl hover:text-green-600">
-                    <i class="fab fa-css3-alt text-4xl text-blue-600 "></i>
-                </a>
-                <a href="#" class="text-4xl hover:text-green-600">
-                    <i class="fa-brands fa-php text-5xl text-blue-500"></i>
-                </a>
+                <div class="text-center lg:text-left">
+                    <span class="text-xl font-bold text-green-800">Technology Stack Used:</span>
+                    <div class="flex justify-center lg:justify-start mt-6 space-x-6">
+                        <a href="#" class="text-4xl hover:text-green-600">
+                            <i class="fab fa-node-js text-4xl text-green-500"></i>
+                        </a>
+                        <a href="#" class="text-4xl hover:text-green-600">
+                            <i class="fas fa-database text-4xl text-yellow-500"></i>
+                        </a>
+                        
+                        <a href="#" class="text-4xl hover:text-green-600">
+                            <i class="fab fa-css3-alt text-4xl text-blue-600 "></i>
+                        </a>
+                        <a href="#" class="text-4xl hover:text-green-600">
+                            <i class="fa-brands fa-php text-5xl text-blue-500"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
-        </div>
 
-    </div>
-
-    
-    <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold  gap-1 ">
+            
+            <h3 class="text-center mt-10 pt-6 border-t-2 border-gray-300 text-lg font-medium italic bold  gap-1 ">
                 © Copyright 2025 AYUSH Herb - All Rights Reserved. Designed and Developed by 
                 <a href="https://github.com/2784alok" target="_blank" class=" hover:text-red-600 font-medium hover:font-semibold transition-transform duration-200 hover:scale-105">
                     Alok </a> , 
