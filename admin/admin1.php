@@ -113,7 +113,6 @@
                 <h1 class="text-green-900 font-bold">Admin Dashboard, <?php echo htmlspecialchars($user_email); ?></h1>
             </div>
 
-            <!-- Admin Cards -->
             <div class="grid grid-rows lg:grid-cols-4 gap-5 mt-10">
                 <!-- Manage Herbs Card (Insert Herb Data) -->
                 <a href="../admin/admin.php">

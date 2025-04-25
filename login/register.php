@@ -60,14 +60,12 @@
                 } elseif (strlen($password) < 6) {
                     echo '<p class="text-red-500 mt-4">Password must be at least 6 characters!</p>';
                 } else {
-                    // Database connection
                     $conn = new mysqli("localhost", "root", "", "ayush_herb");
 
                     if ($conn->connect_error) {
                         die("Connection failed: " . $conn->connect_error);
                     }
 
-                    // Check if email already exists
                     $stmt = $conn->prepare("SELECT id FROM users WHERE email = ?");
                     $stmt->bind_param("s", $email);
                     $stmt->execute();
@@ -76,7 +74,6 @@
                     if ($stmt->num_rows > 0) {
                         echo '<p class="text-red-500 mt-4">Email already registered!</p>';
                     } else {
-                        // Hash the password and insert user
                         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
                         $stmt = $conn->prepare("INSERT INTO users (email, password) VALUES (?, ?)");
                         $stmt->bind_param("ss", $email, $hashed_password);
@@ -115,10 +112,8 @@
         </div>
     </main>
 
-    <!-- Scripts -->
     <script src="../script.js"></script>
     <script>
-        // Password visibility toggle for password field
         document.getElementById('toggle-password').addEventListener('click', function () {
             const passwordInput = document.getElementById('password');
             if (passwordInput.type === 'password') {
@@ -132,7 +127,6 @@
             }
         });
 
-        // Password visibility toggle for confirm password field
         document.getElementById('toggle-confirm-password').addEventListener('click', function () {
             const confirmPasswordInput = document.getElementById('confirm-password');
             if (confirmPasswordInput.type === 'password') {

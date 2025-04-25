@@ -19,7 +19,7 @@
     }
     $user_email = $_SESSION['user_email'];
 
-    // Database connection
+
     $conn = new mysqli("localhost", "root", "", "ayush_herb");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -107,13 +107,11 @@
         </a>
     </div>
 
-    <!-- Main Content Area (Responsive Fix Applied) -->
     <div class=" flex-1 p-10 w-full md:ml-64">
         <div class="text-3xl">
             <h1 class="text-green-900 font-bold">Admin Dashboard, <?php echo htmlspecialchars($user_email); ?></h1>
         </div>
 
-        <!-- Admin Cards -->
         <div class="mt-10">
             <!-- Manage Herbs Card -->
             <div class="w-full bg-green-200 rounded-xl mx-auto p-6 space-y-2 shadow-md ">

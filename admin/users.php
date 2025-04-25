@@ -19,7 +19,6 @@
     }
     $user_email = $_SESSION['user_email'];
 
-    // Database connection
     $conn = new mysqli("localhost", "root", "", "ayush_herb");
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
@@ -122,7 +121,7 @@
             <div class="text-gray-600 text-lg"><p>View users, admins, their posts, or delete them.</p></div>
         </div>
 
-        <!-- Search Form -->
+        
         <div class="mt-4">
             <form method="GET" class="flex gap-4">
                 <input type="email" name="search_email" class="p-2 border rounded-xl border-green-300 placeholder:text-gray-400 w-full md:w-1/3" placeholder="Search by email..." value="<?php echo isset($_GET['search_email']) ? htmlspecialchars($_GET['search_email']) : ''; ?>">
@@ -136,7 +135,6 @@
         </div>
 
         <?php
-        // Handle delete post
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_post'])) {
             $post_id = $_POST['post_id'];
             $stmt = $conn->prepare("DELETE FROM forum_posts WHERE id = ?");
@@ -149,17 +147,16 @@
             $stmt->close();
         }
 
-        // Handle delete user and their posts
+
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_user_completely'])) {
             $email = $_POST['email'];
 
-            // Delete from forum_posts
             $stmt1 = $conn->prepare("DELETE FROM forum_posts WHERE user_email = ?");
             $stmt1->bind_param("s", $email);
             $stmt1->execute();
             $stmt1->close();
 
-            // Delete from users
+
             $stmt2 = $conn->prepare("DELETE FROM users WHERE email = ?");
             $stmt2->bind_param("s", $email);
             if ($stmt2->execute()) {
@@ -170,21 +167,19 @@
             $stmt2->close();
         }
 
-        // Determine if a search is active
+
         $search_email = isset($_GET['search_email']) ? trim($_GET['search_email']) : '';
         $is_search = !empty($search_email);
 
-        // Users Section
+        
         echo "<h2 class='text-xl font-bold text-green-800 mt-6'>Users</h2>";
 
         if ($is_search) {
-            // Search for user by email in users and forum_posts
             $stmt = $conn->prepare("SELECT DISTINCT email FROM users WHERE email = ? UNION SELECT DISTINCT user_email AS email FROM forum_posts WHERE user_email = ?");
             $stmt->bind_param("ss", $search_email, $search_email);
             $stmt->execute();
             $result = $stmt->get_result();
         } else {
-            // Fetch all users
             $result = $conn->query("SELECT DISTINCT email FROM users");
         }
 
@@ -227,7 +222,7 @@
             $stmt->close();
         }
 
-        // Admins Section 
+        
         if (!$is_search) {
             echo "<h2 class='text-xl font-bold text-green-800 mt-10'>Admins</h2>";
             $admin_result = $conn->query("SELECT DISTINCT email FROM admins");
@@ -237,7 +232,7 @@
                     echo '<div class="mt-4 bg-white p-4 rounded shadow">';
                     echo "<h3 class='text-green-800 font-semibold'>$admin_email (Admin)</h3>";
 
-                    // Admin's posts
+                   
                     $stmt = $conn->prepare("SELECT id, content FROM forum_posts WHERE user_email = ?");
                     $stmt->bind_param("s", $admin['email']);
                     $stmt->execute();

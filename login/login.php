@@ -2,7 +2,7 @@
 
 session_start();
 
-// Redirect if already logged in
+
 if (isset($_SESSION['user_email'])) {
     if ($_SESSION['is_admin']) {
         header("Location: ../admin/admin1.php");
@@ -61,7 +61,7 @@ if (isset($_SESSION['user_email'])) {
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $email = trim($_POST['email']);
                 $password = trim($_POST['password']);
-                $is_admin_login = isset($_POST['admin_login']); // Check if "Login as Admin" button was clicked
+                $is_admin_login = isset($_POST['admin_login']); 
 
                 $conn = new mysqli("localhost", "root", "", "ayush_herb");
                 if ($conn->connect_error) {
@@ -69,7 +69,6 @@ if (isset($_SESSION['user_email'])) {
                 }
 
                 if ($is_admin_login) {
-                    // Check admins table only
                     $stmt = $conn->prepare("SELECT password FROM admins WHERE email = ?");
                     $stmt->bind_param("s", $email);
                     $stmt->execute();
@@ -88,7 +87,6 @@ if (isset($_SESSION['user_email'])) {
                     }
                     $stmt->close();
                 } else {
-                    // Check users table only
                     $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
                     $stmt->bind_param("s", $email);
                     $stmt->execute();
@@ -146,4 +144,5 @@ if (isset($_SESSION['user_email'])) {
 </html>
 
 <?php
+
 ?>
